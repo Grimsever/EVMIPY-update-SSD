@@ -1,0 +1,970 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Принципы построения системы позиционирования блока головок жестких дисков</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+<!--
+.style4 {color: #0000FF}
+.style5 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style7 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 80%; }
+.style8 {font-family: Verdana, Arial, Helvetica, sans-serif}
+div.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+li.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+#Layer1 {
+	position:absolute;
+	left:10px;
+	top:1721px;
+	width:136px;
+	height:16px;
+	z-index:1;
+}
+.style11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 85%; }
+div.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section13 {page:Section13;}
+div.Section14 {page:Section14;}
+div.Section15 {page:Section15;}
+li.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section17 {page:Section17;}
+div.Section18 {page:Section18;}
+li.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section27 {page:Section27;}
+li.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+-->
+</style>
+</head>
+<body background="img/green.jpg" class="style7" STYLE="background-repeat:repeat-y;">
+<h4 align="left"><u><a name="top"></a><span class="style11">Принципы построения системы позиционирования блока головок жестких дисков</span></u></h4>
+<table width="541" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="31" height="5">&nbsp;</td>
+    <td width="20" valign="top"><A HREF="index.htm"><img src="img/bkarrow.gif" alt="Back to beginning" width="20" height="18" border="0"></a></td>
+    <td width="490" bordercolor="#ECE9D8" class="style8"><A HREF="index.htm" class="style5"> Назад к оглавлению </a></td>
+  </tr>
+</table>
+<p>Компенсирование ошибок позиционирования, а также удержание магнитных головок над выбранной дорожкой в современных жестких дисках осуществляется с помощью сервосистемы. Сервосистема в том виде, в котором она представлена сейчас, появилась не сразу. В ранних моделях накопителей ее не было и позиционирование головок осуществлялось с помощью простого способа - при помощи шагового двигателя. Само название шаговый двигатель означает перемещение исполнительного механизма пошагово, т.е. дискретно с заданным интервалом.</p>
+<p>Шаговый двигатель с помощью направляющей рейки преобразовывал управляющий сигнал в линейное перемещение позиционера с фиксацией головок в заданном положении, обратная связь в данной системе отсутствовала. В жестких дисках шаг перемещения ротора позиционера соответствовал шагу дорожек, т.е. двигатель за один шаг перемещал блок головок записи/чтения на одну дорожку (рис.11).</p>
+<div align="center"><img src="img/13_10000.jpg" border="0" width="486" height="559" alt=""></div>
+<div align="center" class="pe">Рис.11. Жесткий диск с шаговым двигателем позиционирования блока головок </div>
+<br>
+<p>Основной недостаток такого подхода заключался в том, что позиции ротора шагового двигателя были фиксированными. Блок головок перемещался на то место, где должна быть дорожка, а не где она есть на самом деле. При нагреве диски расширялись и дорожки смещались относительно своего точного положения на диске на некоторую величину, соответствующую коэффициенту теплового расширения. Фиксированный шаг перемещения позиционера не позволял компенсировать это явление, а отсутствие обратной связи не позволяло контроллеру точно подстраивать блок головок записи/чтения точно по центру дорожки. Минусом данной системы было также большое время доступа к требуемой дорожке, ведь при считывании данных с внутренних и внешних дорожек пластины блок головок должен с помощью прикрепленной к нему рейки "отщелкать" максимум шагов шестерни шагового двигателя.</p>
+<p>Увеличивающаяся плотность записи требовала увеличения количества дорожек на один сантиметр радиуса рабочей поверхности пластины ЖД, и как следствие - уменьшения расстояния между двумя соседними дорожками, и сокращению ширины самой дорожки. Поэтому эту систему позиционирования блока головок на основе шагового двигателя заменила более прогрессивная система позиционирования с соленоидным двигателем (называемая также звуковой катушкой). Сначала она была основана на линейном перемещении блока головок, но уменьшение размеров НЖМД потребовало перейти к принципу сбалансированного ротационного позиционирования (рис.12).</p>
+<div align="center"><img src="img/13_20000.jpg" border="0" width="500" height="337" alt=""></div>
+<div align="center" class="pe">Рис.12. Жесткий диск с соленоидным двигателем позиционирования блока головок </div>
+<br>
+<p>В таком приводе блок головок записи/чтения связан с катушкой индуктивности, помещенной в магнитное поле постоянного магнита. Головки жестко закреплены на поворотной рамке позиционера вместе со звуковой катушкой, через которую протекает ток. Изменение тока в звуковой катушке приводит к ее перемещению относительно жестко закрепленного магнита, а значит и к перемещению блока головок. Управляя направлением и величиной тока через катушку, можно быстро перевести блок головок в любое положение над пластиной жесткого диска. Замкнутая система обратной связи, отслеживающая положение головки, обеспечивает ее точное позиционирование и нахождение в нужной точке. Управление сервоприводом может быть оптимизировано по времени перемещения блока головок на требуемую позицию. В этом случае, если отклонение от нужного положения большое, то подается большой ток, вызывающий большое ускорение и быстрый полет блока головок записи/чтения. По мере приближения к нужной точке ток уменьшается, а для компенсации инерции в конце полета ток может поменять направление. При этом будет происходить торможение (рис.13).</p>
+<div align="center"><img src="img/13_30000.gif" border="0" width="500" height="200" alt=""></div>
+<div align="center" class="pe">Рис.13. Токовый импульс позиционирования и скорость движения блока головок </div>
+<br>
+<p>Процесс перемещения головок происходит следующим образом:</p>
+<p>Контроллер определяет, на сколько цилиндров необходимо переместить блок головок записи/чтения и в какую сторону (уменьшение или увеличение номера дорожки). 
+  Формируется импульс тока требуемой полярности и амплитуды. В зависимости от длины перемещения вводится понятие классов позиционирования, по которым формируются токовые импульсы перемещения. Чем больше число классов позиционирования (у современных накопителей - 13), тем быстрее накопитель находит нужную дорожку. 
+  Ожидание на время свободного полета. 
+  Формирование тормозящего импульса обратной связи. 
+  Включение системы тонкого регулирования для точной подстройки на дорожку. 
+  Работа системы тонкого регулирования основывается на считывании сервоинформации (СИ) - вспомогательной разметки на диске. Сервоинформация наносится на поверхность при производстве диска специальным высокоточным оборудованием. Читающая головка постоянно считывает сервоинформацию. Отфильтрованная и усиленная СИ поступает в серводемодулятор, где расшифровывается. На основании полученной информации подается воздействие на устройство управления соленоидным приводом. Таким образом осуществляется слежение с помощью устройства тонкой регулировки (рис. 14) [8].</p>
+<div align="center"><img src="img/13_40000.gif" border="0" width="578" height="338" alt=""></div>
+<div align="center" class="pe">Рис.14. Структурная схема системы управления позиционированием с соленоидным двигателем </div>
+<br>
+<p>Построение системы тонкого регулирования по такому принципу позволило значительно уменьшить влияние температурных и других негативных факторов на точность считывания информации, так как сервометки, являющиеся частью СИ, располагаются рядом с дорожками данных. Сервометки записываются в области, расположенные между дорожками, на этапе сборки накопителей с помощью высокоточного специального оборудования [9].</p>
+<p>Когда головка считывания находится точно посередине между парой соседних сервометок, сигнал рассогласования равен нулю. При отклонении головки в сторону от дорожки возникает сигнал рассогласования, полярность которого зависит от того, в какую сторону она отклонилась. При этом вырабатывается воздействие на катушку, и она смещается в нужную сторону. Более подробно о сервометках будет рассказано в следующей части.</p>
+<p>В современных жестких дисках используется ротационный механизм перемещения блока головок, в котором позиционер перемещается на заданный угол. В этом случае соленоидный двигатель осуществляет преобразование управляющего тока в угол поворота (t) блока головок, который является управляемой величиной.</p>
+<p>Рис. 15 дает представление о работе ротационного механизма соленоидного двигателя.</p>
+<div align="center"><img src="img/13_50000.gif" border="0" width="579" height="513" alt=""></div>
+<div align="center" class="pe">Рис.15. Конструкция и принцип действия поворотного двигателя </div>
+<br>
+<p>При протекании токов I+, I- (рис.15, сечение А-А) через витки рабочих участков катушки на них воздействует сила Лоренца, создающая вращающий момент, направление которого определяется по правилу "правой руки". Если через катушку пропускать постоянный ток, то под воздействием постоянного вращающего момента позиционер будет поворачиваться с постоянным ускорением (без учета сил трения) до упора. Максимальный угол поворота позиционера max составляет около 30°. Предельные положения позиционера ограничиваются механическими фиксаторами (упорами). Ось поворота катушки с рычагами выбирается таким образом, чтобы траектория головок, представляющая дугу окружности радиуса R, проходила приблизительно по радиусу диска.</p>
+<p><a href="#top" target="_top" class="style4">наверх</a></p>
+<DIV></DIV>
+<div align="justify"></div>
+</body>
+</html>

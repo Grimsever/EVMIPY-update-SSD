@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf8" />
+    <title>Медиа-курс "Жёсткий диск"</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../../css/ui-darkness/jquery-ui-1.9.2.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lightbox.css"  />
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  	<script type="text/javascript" src="../../js/jquery-1.8.2.min.js"></script>
+  	<script type="text/javascript" src="../../js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="../../js/lightbox.js"></script>
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+  	<!--[if lt IE 9]>
+  	<script src="../../js/html5.min.js"></script>
+  	<![endif]-->
+  </head>
+	<body id="section9-1">
+    <div id="wrapper">
+        <a id="back" href="../../../start.html" title="Назад на главную"></a>
+
+        <h1>9. Тестирование</h1>
+        <div class="section">
+          <h2>9.1 SMART</h2>
+          <p>S.M.A.R.T. (от англ. self-monitoring, analysis and reporting technology — технология самоконтроля, анализа и отчётности) —технология оценки состояния жёсткого диска встроенной аппаратурой самодиагностики, а также механизм предсказания времени выхода его из строя.</p>
+          <p>SMART производит наблюдение за основными характеристиками накопителя, каждая из которых получает оценку. Характеристики можно разбить на две группы:</p>
+          <ol>
+            <li>параметры, отражающие процесс естественного старения жёсткого диска (число оборотов шпинделя, число перемещений головок, количество циклов включения-выключения);</li>
+            <li>текущие параметры накопителя (высота головок над поверхностью диска, число переназначенных <span class="definition sector">секторов</span>, время поиска <span class="definition track">дорожки</span> и количество ошибок поиска).</li>
+          </ol>
+          <p>Данные хранятся в шестнадцатеричном виде, называемом «raw value», а потом пересчитываются в «value» — значение, символизирующее надёжность относительно некоторого эталонного значения. Обычно «value» располагается в диапазоне от 0 до 100 (некоторые атрибуты имеют значения от 0 до 200 и от 0 до 253).</p>
+          <p>Высокая оценка говорит об отсутствии изменений данного параметра или медленном его ухудшении. Низкая говорит о возможном скором сбое.</p>
+          <p>Значение, меньшее, чем минимальное, при котором производителем гарантируется безотказная работа накопителя, означает выход узла из строя.</p>
+          <p><a href="table-of-smart-attributes.html">Таблица атрибутов SMART</a></p>
+
+        </div><!-- .section -->
+
+        <div class="section" id="section9-2">
+          <h2>9.2 ZD WinBench 99</h2>
+          <p>ZD WinBench 99 является комплексным тестом компьютерного оборудования. Он позволяет тестировать процессор, память, видео, дисковые подсистемы и др.</p>
+          <p>Для тестирования дисковой подсистемы используются наборы тестов Disk Inspection Tests и Disk WinMarks из этого комплекта Ziff-Davis WinBench 99 ver 1.1. Данные тесты работают с логическими дисками. Они эмулирует работу с реальными приложениями, а также содержат синтетический тест, позволяющий определять скорость линейного чтения и зависимость этой скорости от физического месторасположения блока данных на диске.</p>
+          <p>Набор Disk Inspection Tests представляет собой совокупность тестов, определяющих физические характеристики диска. Сюда входят:</p>
+          <ul>
+            <li>Disk Transfer Rate. Тест определяет скорость линейного чтения для данного диска в тысячах байт в секунду (thousand bytes/sec). Выдаются два числовых значения – скорость в начале и конце диска, а также, по желанию, график в формате bmp или таблицу значений в формате csv (comma separated values).</li>
+            <li>Disk Access Time. Определяет скорость доступа к диску в миллисекундах (ms). Получается значение, равное сумме времени задержки (average latency) и среднего времени поиска (average seek time).</li>
+            <li>Disk CPU Utilization. Показывает загрузку процессора в процентах (Percent Used) в процессе обмена с диском.</li>
+          </ul>
+          <p>В набор Disk WinMarks входят два теста, каждый из которых, в свою очередь, является составным – Business Disk WinMark и High-End Disk WinMark</p>
+          <ul>
+            <li>Business Disk WinMark выдает усредненное значение скорости работы диска с набором офисных приложений в тысячах байт в секунду (thousand bytes/sec).</li>
+            <li>High-End Disk WinMark выдает как такое же усредненное значение скорости при работе набором "более продвинутых" приложений, так и результаты скорости для каждого приложения. Приложения следующие:
+            <ol>
+              <li>AVS/Express 3.4 – программа визуализации.</li>
+              <li>Microsoft FrontPage 98 – HTML-редактор.</li>
+              <li>Bentley Systems MicroStation SE – программа САПР.</li>
+              <li>Adobe Photoshop 4.0 – программа редактирования изображений.</li>
+              <li>Adobe Premiere 4.2 – программа редактирования видео.</li>
+              <li>Sonic Foundry Sound Forge 4.0 – программа обработки звука.</li>
+              <li>Microsoft Visual C++ 5.0 – компилятор языка С++.</li>
+            </ol>
+            </li>
+          </ul>
+          <p>Набор выбран таким образом, чтобы в нем встречались приложения, работающие как с малыми по объему файлами (например FrontPage), так и с относительно большими (например Photoshop).</p>
+          <p>Ziff-Davis WinBench 99 имеет собственный редактор результатов. Результаты хранятся в общей базе данных, также можно накладывать фильтры и сортировать, что позволяет сравнивать разные модели дисков в удобном виде. Результаты легко импортируются в Excel.</p>
+          <p>В ZD WinBench 99 можно создавать пакетные файлы (batch files), чтобы выполнять выбранные тесты.  Эти пакетные файлы можно передать в любую другую машину с Windows 95, Windows 98 или c Windows NT. (Эта возможность может быть наиболее полезна тестерам, которым нужно выполнять один и тот же тест или серию тестов на других компьютерах).</p>
+          <p><strong>Тестирование с помощью программы ZD WinBench 99</strong></p>
+          <p>Перезагружаем компьютер. Закрываем все приложения и задачи (желательно также отключить работу с сетью).</p>
+          <a href="img1.jpg"><img src="img1.jpg" width="308" height="240" align="right" alt="" title="Рисунок 1 – Главное окно программы ZD Winbench 99" /></a>
+          <p>Запускаем программу Winbench 99. Для выбора нужных тестов в поле со списком Run выбираем нужный набор (Disk WinMark, High-End Disk WinMark или Disk Inspection Tests) и запускаем его (нажимаем на кнопку с иконкой часов) Перезагружаем компьютер. Закрываем все приложения и задачи (желательно также отключить работу с сетью).</p>
+          <p>Запускаем программу Winbench 99. Для выбора нужных тестов в поле со списком Run выбираем нужный набор (Disk WinMark, High-End Disk WinMark или Disk Inspection Tests) и запускаем его (нажимаем на кнопку с иконкой часов) (рис. 1).</p>
+          <p>Если нужно выбрать один тест, а не набор, то выбираем из списка Selected… (рис. 2).</p>
+          <a href="img2.jpg"><img src="img2.jpg" width="243" height="150" align="left" alt="" title="Рисунок 2 – Окно выбора тестов и их наборов" /></a>
+          <p>Там же можно задать настройки (Settings) к каждому тесту. Задаем тестируемый диск (Settings->Common->Disk Drive) и для теста Disk Transfer Rate следует задать диск и файл, куда будет сохранен график скорости передачи данных (в графическом *.bmp и/или табличном виде *.csv).</p>
+          <p>Следует подождать результатов. Результаты сохраняются в отдельном файле базы данных *.ztd для последующего сравнения. Чтобы просмотреть результаты теста следует нажать на кнопку сравнения результатов (Compare Results) и выбрать базу данных для сравнения (рис. 3). Откроется таблица с результатами.</p>
+          <a href="img3.jpg"><img src="img3.jpg" width="646" height="438" border="0" alt="" title="Рисунок 3 – Сравнение результатов тестирования НЖМД" /></a>
+        </div><!-- .section -->
+
+        <div class="section" id="section9-3">
+          <h2>9.3 HddSpeed</h2>
+          <p>HddSpeed – это бенчмаpк скорости жестких дисков, отражающий реальное быстродействие жесткого диска, который позволяет получить максимально полную и объективную информацию о нем. Для запуска программы необходим 286+ процессор, минимальный объем памяти, VGA-совместимая видеокарта и операционная система MS DOS версии 3.3 и выше. Тест не будет работать под управлением мyльтизадачных ОС, таких как OS/2 или Windows. Также нежелательно использование совместно с менеджерами памяти типа EMM386 и QEMM  это может привести к искажению результатов тестирования из-за менее точного измерения временных интервалов.</p>
+          <p>Тест поставляется с полным исходным кодом.</p>
+          <p>Данный тест позволяет получить как информацию о физических характеристиках конкретной модели жесткого диска, так и о скорости его работы в данной системе.</p>
+          <p>Тест позволяет определить следующие параметры:</p>
+          <ul>
+            <li>модель диска, серийный номер и т.п. IDE информацию,</li>
+            <li>текущий режим трансляции, используемый BIOS (CHS/LBA translation)</li>
+            <li>скорость вращения диска, оборотов в минуту (RPM)</li>
+            <li>эффективный размер буфера (у некоторых моделей жестких дисков).</li>
+          </ul>
+          <p>Также производится тестирование скоростных характеристик диска:</p>
+          <ul>
+            <li>время различных видов поиска и доступа к информации.</li>
+            <li>максимальной и минимальной скорости линейного (последовательного) чтения/записи.</li>
+            <li>средней линейной скорости чтения/записи данных.</li>
+            <li>максимально возможной скорости чтения из буфера диска.</li>
+            <li>скорости чтения произвольных блоков случайного размера.</li>
+          </ul>
+          <p>HddSpeed строит графики скоростей чтения, записи и верификации по отдельным дорожкам. Данные графики позволяют увидеть замещенные дорожки, зоны с различной плотностью записи, т.е. дают более детальную информацию о скоростных характеристиках диска и качестве его поверхности. Также программа строит график скорости чтения из кэш-буфера винчестера, в зависимости от размера блока. Он позволяет увидеть максимальную пропускную способность связки винчестер-контроллер-шина. Все графики сохраняются в формате PCX.</p>
+          <p>Имеется возможность показа S.M.A.R.T.-информации (Self Monitoring Analysis and Report Technology – технология самостоятельного слежения анализа и отчетности).</p>
+          <p><strong>Тестирование жесткого диска программой HddSpeed.</strong></p>
+          <p>Запускаем файл HddSpeed.exe. Интерфейс теста достаточно прост и логичен.</p>
+          <a href="img4.jpg"><img src="img4.jpg" width="646" height="507" align="middle" alt="" /></a>
+          <p>При нажатии на кнопку "S.M.A.R.T." происходит проверка параметров жесткого диска.</p>
+          <a href="img5.jpg"><img src="img5.jpg" width="579" height="406" align="middle" alt="" /></a>
+          <p>"Graph" содержит в себе тесты производительности ("Benchmarks") и график, демонстрирующий скорость работы жесткого диска.</p>
+          <p>Во вкладке "Map" происходит проверка секторов жесткого диска. Справа отображаются количество «хороших» и «плохих» секторов.</p>
+          <a href="img6.jpg"><img src="img6.jpg" width="646" height="507" align="middle" alt="" /></a>
+        </div><!-- .section -->
+
+        <div class="section" id="section9-4">
+          <h2>9.4 HD Tune</h2>
+          <p>HD Tune - программа позволяет узнать температуру жесткого диска, скорость его работы и проверить жесткий диск на наличие ошибок.</p>
+          <p><strong>Тестирование жесткого диска программой HD Tune.</strong></p>
+          <p>Запускаем программу. На вкладке «Benchmark» программа отображает температуру жесткого диска, а также при, нажатии на кнопку Start, строит график скорости работы жесткого диска.</p>
+          <a href="img7.jpg"><img src="img7.jpg" width="570" height="460" align="middle" alt="" /></a>
+          <p>Во вкладке «Info» отображается информация по разделам жесткого диска и файловой системе.</p>
+          <a href="img8.jpg"><img src="img7.jpg" width="570" height="460" align="middle" alt="" /></a>
+          <p>Во вкладке «Health» отображаются SMART – параметры жесткого диска.</p>
+          <p>Во вкладке «Error Scan», при нажатии на кнопку Start, программа выполняет  сканирование поверхности жесткого диска. При проверке накопителя не должно стоять галочки в Quick scan (более тщательный тест). Если на поверхности нет сбойных секторов, то все квадратики будут зелеными ( красным цветом будут обозначены сбойные сектора). </p>
+           <a href="img9.jpg"><img src="img9.jpg" width="570" height="460" align="middle" alt="" /></a>
+        </div><!-- .section -->
+
+        <div class="section" id="section9-5">
+          <h2>9.5 Victoria</h2>
+          <p>Запускаем программу Victoria, выбираем жесткий диск для тестирования.</p>
+          <a href="img10.png"><img src="img10.png" width="760" height="564" align="middle" alt="" /></a>
+          <p>Для просмотра его SMART – характеристик, нажимаем кнопку Get SMART.</p>
+          <a href="img11.png"><img src="img11.png" width="760" height="564" align="middle" alt="" /></a>
+          <p>Переходим в раздел тестирования поверхности жесткого диска.</p>
+          <a href="img12.png"><img src="img12.png" width="760" height="564" align="middle" alt="" /></a>
+          <p>Задаются параметры проверки диска такие как:</p>
+          <ul>
+            <li>Начальный и конечный сектор для тестирования – чтобы не тестировать весь диск .</li>
+            <li>Режим тестирования: verify(проверка), read(только чтение), write(проверка на запись, в этом случае все данные будут перезаписаны).</li>
+            <li>Действие при обнаружении сбойного сектора: ignore(ничего не делать), erase(удалить), remap(заменить на хороший сектор),  restore(восстановить).</li>
+          </ul>
+          <p>Нажимаем кнопку Start.</p>
+          <a href="img13.png"><img src="img13.png" width="760" height="564" align="middle" alt="" /></a>
+          <p>Сектора, помеченные оранжевым цветом – это сектора, которые вскоре могут стать нечитаемыми (плохими). Сектора, помеченные красным – это плохие сектора, их содержимое компьютер не может прочитать. Если их не много, то можно их ограничить, чтобы компьютер не пытался туда что-нибудь записать.</p>
+          <p>Важно помнить, что если плохих секторов много, то нужно побыстрее переписать важные данные с этого жесткого диска.</p>
+          <br />
+          <p><a href="example.docx">Пример отчета по лабораторной работе</a></p>
+        </div><!-- .section -->
+
+
+        <div id="footer">
+           <div class="text_bru"><strong>Руководитель:</strong> Прудников В.М.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Разработчики:</strong> Лакей Е.А., Снопков Е.И.<br />БРУ, Электротехнический факультет,  кафедра АСУ &copy; 2012</div>
+        </div>
+    </div><!-- #wrapper -->
+
+	<div id="toc-holder" class="toc-holder">
+  		<a href="#" class="toc-link" id="toc-link" onclick="return false;"><span>&#9660;</span> Содержание</a>
+  		<ul id="toc" class="toc">
+  		<li class="toc-h1"><a href="#">1. Конструкция НЖМД</a>
+      	<ul class="toc-sub closed">
+  				<li><a href="../construction/index.html#section1-1">1.1&nbsp; Введение</a></li>
+  				<li><a href="../construction/index.html#section1-2">1.2&nbsp; Корпус</a></li>
+  				<li><a href="../construction/index.html#section1-3">1.3&nbsp; Пакет магнитных дисков</a></li>
+  				<li><a href="../construction/index.html#section1-4">1.4&nbsp; Двигатель и элемнеты привода шпинделя</a></li>
+  				<li><a href="../construction/index.html#section1-5">1.5&nbsp; Блок магнитных головок</a></li>
+  				<li><a href="../construction/index.html#section1-6">1.6&nbsp; Печатная плата с электронными компонентами</a></li>
+  				<li><a href="../construction/index.html#section1-7">1.7&nbsp; Кэш-буфер НЖМД</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section2">2. Механизм привода и автоматической парковки головок</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-1">2.1&nbsp; Устройство механизма привода и автоматической парковки головок</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-2">2.2&nbsp; Механизм привода с шаговым двигателем</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-3">2.3&nbsp; Механизм привода с подвижной катушкой</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-4">2.4&nbsp; Система обратной связи</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-5">2.5&nbsp; Автоматическая парковка головок</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section3">3. Процесс работы HDD</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../process-work/index.html#section3-1">3.1&nbsp; Пpи включении</a></li>
+  				<li><a href="../process-work/index.html#section3-2">3.2&nbsp; Во вpемя pаботы</a></li>
+  				<li><a href="../process-work/index.html#section3-3">3.3&nbsp; Пpи отключении</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section4">4. Интерфейсы</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../interfaces/index.html#section4-1">4.1&nbsp; Интерфейс ATA</a></li>
+  				<li><a href="../interfaces/index.html#section4-2">4.2&nbsp; Интерфейс SATA</a></li>
+  				<li><a href="../interfaces/index.html#section4-3">4.3&nbsp; Интерфейс SCSI</a></li>
+  				<li><a href="../interfaces/index.html#section4-4">4.4&nbsp; Интерфейс SAS</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section5">5. Чтение, запись на HDD</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../read-write/index.html#section5-1">5.1&nbsp; Чтение HDD</a></li>
+  				<li><a href="../read-write/index.html#section5-2">5.2&nbsp; Запись на HDD</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section6">6. Логическая организация данных</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../logical-data/index.html#section6-1">6.1&nbsp; Устройство HDD</a></li>
+  				<li><a href="../logical-data/index.html#section6-2">6.2&nbsp; Зонная запись</a></li>
+  			</ul>
+  		</li>
+
+  		<li class="toc-h1"><a href="#section7">7. Подготовка к использованию</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../preparation-for-use/index.html#section7-1">7.1&nbsp; Введение</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-2">7.2&nbsp; Конфигурирование устройства. Подключение интерфейсного и питающего кабелей</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-3">7.3&nbsp; Установка параметров НЖМД в CMOS Setup</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-4">7.4&nbsp; Разбиение на разделы</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-5">7.5&nbsp; Логическое форматирование</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-6">7.6&nbsp; Создание системного диска</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section8">8. Параметры дисковых накопителей</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../parameters/index.html#section8-1">8.1&nbsp; Общие параметры</a></li>
+  				<li><a href="../parameters/index.html#section8-2">8.2&nbsp; Параметры организации конфигурации</a></li>
+  				<li><a href="../parameters/index.html#section8-3">8.3&nbsp; Параметры быстродействия и производительности</a></li>
+  				<li><a href="../parameters/index.html#section8-4">8.4&nbsp; Параметры надежности  и достоверности хранения данных</a></li>
+  				<li><a href="../parameters/index.html#section8-5">8.5&nbsp; Физические параметры</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section9">9. Тестирование</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../testing/index.html#section9-1">9.1&nbsp; SMART</a></li>
+  				<li><a href="../testing/index.html#section9-2">9.2&nbsp; ZD WinBench 99</a></li>
+  				<li><a href="../testing/index.html#section9-3">9.3&nbsp; HddSpeed</a></li>
+  				<li><a href="../testing/index.html#section9-4">9.4&nbsp; HD Tune</a></li>
+          <li><a href="../testing/index.html#section9-5">9.5&nbsp; Victoria</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section10">10. RAID-массивы</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../raid/index.html#section10-1">10.1&nbsp; Дисковый массив RAID</a></li>
+  				<li><a href="../raid/index.html#section10-2">10.2&nbsp; Типы(уровни) RAID</a></li>
+  				<li><a href="../raid/index.html#section10-3">10.3&nbsp; Сравнительная характеристика стандартных уровней RAID</a></li>
+  				<li><a href="../raid/index.html#section10-4">10.4&nbsp; Контроллеры RAID</a></li>
+  				<li><a href="../raid/index.html#section10-5">10.5&nbsp; Типы контроллеров RAID</a></li>
+  				<li><a href="../raid/index.html#section10-6">10.6&nbsp; Специальные технологии RAID-контроллеров</a></li>
+  				<li><a href="../raid/index.html#section10-7">10.7&nbsp; RAID 0-50</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-click"><a href="../video/index.html">Видеоматериал</a></li>
+      <li class="toc-click"><a href="../literature/index.html">Литература</a></li>
+  	</ul>
+  	</div><!-- #toc-holder -->
+    <a href="#top" class="top-link" id="top-link">&#9650; Наверх</a>
+    <script type="text/javascript" src="../../js/menu.min.js"></script>
+  </body>
+</html>

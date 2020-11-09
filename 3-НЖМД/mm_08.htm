@@ -1,0 +1,1063 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Файловые системы</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+<!--
+.style4 {color: #0000FF}
+.style5 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style7 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 80%; }
+.style8 {font-family: Verdana, Arial, Helvetica, sans-serif}
+div.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+li.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+#Layer1 {
+	position:absolute;
+	left:10px;
+	top:1721px;
+	width:136px;
+	height:16px;
+	z-index:1;
+}
+.style11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 85%; }
+div.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section13 {page:Section13;}
+div.Section14 {page:Section14;}
+div.Section15 {page:Section15;}
+li.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section17 {page:Section17;}
+div.Section18 {page:Section18;}
+li.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+.style12 {font-size: small}
+-->
+</style>
+</head>
+<body background="img/green.jpg" class="style7" STYLE="background-repeat:repeat-y;">
+<h4 align="left"><u><a name="top"></a><span class="style11">Файловые системы</span></u></h4>
+<table width="541" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="31" valign="top">&nbsp;</td>
+    <td width="20" align="left" valign="top"> <a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td width="490"> <u><a href="mm_08.htm#введение">Введение в ФС</a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="left" valign="top"><a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td><u><a href="mm_08.htm#fat16">ФС FAT16</a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="left" valign="top"><a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td><u><a href="mm_08.htm#fat32">ФС FAT32</a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="left" valign="top"><a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td><u><a href="mm_08.htm#ntfs">ФС NTFS</a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="left" valign="top"><a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td><u><a href="mm_08.htm#hpfs">ФС HPFS</a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td valign="top"><A HREF="index.htm"><img src="img/bkarrow.gif" alt="Back to beginning" width="20" height="18" border="0"></a></td>
+    <td bordercolor="#ECE9D8" class="style8"><A HREF="index.htm" class="style5"> Назад к оглавлению </a></td>
+  </tr>
+</table>
+<DIV>
+  <div class=Section16 style8 style12> 
+    <p><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'><a name="введение"></a>Под
+      файловой системой с точки зрения жесткого диска следует понимать систему
+      разметки раздела на служебные и пользовательские блоки для упорядоченного
+      хранения информации</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Служебные блоки описывают состояние
+        пользовательских блоков</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>которые могут быть заняты файлами</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>либо
+    свободными</span>. <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>В задачи файловой системы входит</span>:     
+    <ul>
+      <li> <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Управление
+      выделением свободных блоков под новые файлы</span></li>
+      <li><span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Управление
+        каталогами и именами файлов и ссылок</span></li>
+      <li><span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Поиск
+        содержимого файлов по имени</span>.    </li>
+    </ul>
+    <p> <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Различные
+      файловые системы с разной степенью эффективности реализуют перечисленные
+      функции</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>а также поддерживаются различными файловыми системами</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Наиболее
+    часто встречающиеся файловые системы перечислены ниже</span>.<br>
+    <a href="#top" target="_top" class="style4">наверх</a>
+    <p><span style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'><strong>FAT </strong></span><strong>1</strong><span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'><strong>6<a name="fat16"></a></strong>.
+        <o:p></o:p>
+      </span><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Эта
+      файловая система является одной из самых старых систем</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>применяемых
+        до сих пор</span>. <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>Поддержка ее реализована в большинстве современных ОС</span>:
+      DOS, Windows 95/98/ME, Windows NT/2000/XP, OS/2, Linux, QNX, FreeBSD <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>и
+        других</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Название
+      файловой системы происходит от имени ее главного управляющего элемента</span> &#339; <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>таблицы
+        размещения файлов</span> (File Allocation Table). <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Единицей
+          размещения данных является кластер</span>, &#339; <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>совокупность
+            нескольких смежных блоков диска</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Размер кластера может быть 1</span>,
+      2, 4, 8, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>1</span>6, 32 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>или</span> 64 <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>блока</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Файлы
+        представляют собой цепочки кластеров</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Таблица размещения файлов описывает
+          цепочки кластеров</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>принадлежащих каждому файлу</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Каждый
+            кластер может принадлежать не более</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>чем одному файлу</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Число
+      1</span>6 <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>в названии файловой системы говорит о количестве двоичных
+        разрядов</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>отводимых под хранение номера кластера в таблице
+          размещения файлов</span>. FAT<span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>6 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>допускает на
+            диске до</span> 65525 <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>кластеров</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>размер которых может быть от</span> 5<span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>2 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>до</span> 32768 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>байт</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Это
+              позволяет создавать логические диски размером до</span> 2<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Гб</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Чем
+                больше размер диска</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>тем больше необходим размер кластера</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Вообще
+      говоря</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>большие кластеры снижают эффективность использования
+        дискового пространства</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Это связано с тем</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>что
+          многие файлы являются короткими и часть места в кластере пропадает</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Для
+      большей надежности на диске хранится две копии</span> FAT. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Каждое
+        изменение в размещении файлов одновременно отражается в обеих таблицах</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Рассогласование
+          этих таблиц является ошибкой</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Если же рассогласование возникло</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>то
+            не существует проверенного способа установить</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>какая из таблиц
+              содержит более правильную информацию</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Поэтому</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>наличие
+                двух копий оправдано лишь в той ситуации</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>когда одна из копий просто физически
+                  не считывается с диска</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Такая ситуация крайне маловероятна
+                    для жестких дисков</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>и является вероятной лишь для дискет</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>В
+                      самом деле</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>развитие систем</span> FAT <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>началось с системы</span> FAT<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>2, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>которая
+                        и до сих пор используется для дискет</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>В случае с дискетами физически отказ
+                          блока</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>принадлежащего одной копии</span> FAT, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>никак
+                            не связан с отказом блока второй копии</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>поэтому наличие двух копий оправдано</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Любая
+                              же программная ошибка при модификации</span> FAT <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>обычно синхронно отражается в обеих
+                                копиях</span>. <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>Во всяком случае</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>при исправном чтении обеих копий</span> FAT <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>существует
+                                  проблема выбора правильной копии</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Топология
+      файловой системы</span> FAT<span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>6 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>приведена на
+        рисунке ниже</span>.
+    <p align="center"><span
+style='color:windowtext'><img
+src="img/_img_3.PNG" width=703 height=166 border="1" v:shapes="_x0000_i1028"></span>Топология раздела<span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'> FAT</span>1<span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'>6</span>
+    <p align="justify"><span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'>
+      <o:p></o:p>
+        </span><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Кластеры
+      пользователя располагаются непосредственно за корневым каталогом</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>размер
+        которого задается при форматировании и впоследствии не изменяется операционной
+        системой</span>. </p>
+    <p align="justify"><span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'><strong>FAT32</strong><a name="fat32"></a>
+      <o:p></o:p>
+      </span><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Система</span> FAT32 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>является
+        развитием системы</span> FAT. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Количество разрядов</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>кодирующих
+          номер кластера</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>доведено до</span> 32. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>В
+            результате этого</span>, FAT32 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>способна содержать почти в</span> 65000 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>раз
+              больше кластеров</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>чем система</span> FAT<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>6. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Даже
+                при маленьком размере кластера</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>разделы размером до</span> 2<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Тб
+                  могут быть отформатированы под эту файловую систему</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Дополнительно</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>система</span> FAT32 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>имеет
+                    резервную копию загрузочной записи</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>и допускает произвольное
+                      расположение корневого каталога</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Система</span> FAT32 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>доступна
+                        для использования начиная с</span> Windows 95 OEM Release 2, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>в
+                          системах</span> Windows 98, ME, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>а также в системах </span>Windows
+      2000, XP. MS-DOS, Windows 3.<span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>, Windows NT 3.5<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>1</span>/4.0, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>ранние
+        версии</span> Windows 95 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>не могут использовать</span> FAT32.</p>
+    <p align="center"><span
+style='color:windowtext'><img
+src="img/_img_4.PNG" width=711 height=167 border="1" v:shapes="_x0000_i1029"></span>Топология раздела<span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'> FAT32</span></p>
+    <p align="left"><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>В
+      отличие от</span> FAT<span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>1</span>6 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>в системе</span> FAT32 <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>корневой
+        каталог располагается в кластерах</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>подобно другим файлам</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Загрузочная
+  запись содержит ссылку на его первый кластер</span>.<br>
+    <a href="#top" target="_top" class="style4">наверх</a></p>
+  </div>
+  <div class=Section17 style8 style12>
+    <p><span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'><strong>NTFS<a name="ntfs"></a>.</strong>
+        <o:p></o:p>
+    </span><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Файловая
+      система</span> NTFS <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>является более сложной по сравнению с системами</span> FAT. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Для
+        работы с ней требуется больше оперативной памяти</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>поэтому
+          ее использование начинает оправдывать себя только на сравнительно
+          производительных и требующих высокой надежности системах</span>. NTFS <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>применяется
+            в операционных системах</span> Windows NT, Windows 2000 <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>и</span> Windows XP. <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>Не рекомендуется форматировать под</span> NTFS <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>разделы
+              размером менее </span>400<span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Мб</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>потому что
+                значительная часть места</span> «<span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>пропадает</span>» <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>под
+                  служебные структуры данных</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>В
+      основе</span> NTFS <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>лежит структура данных</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>называемая</span> MFT (Master File Table). MFT <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>также является системным файлом</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>хранящим
+        записи о других файлах</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Каждая запись о файле имеет
+          фиксированную длину</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Запись содержит некоторую
+            фиксированную информацию</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>общую для всех файлов</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>а
+              также </span><i>атрибуты файла</i>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>которые описывают имя файла</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>место
+                расположения его данных</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>время и дату создания и пр</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Каждый
+                  файл описывается одним числом</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>представляющим собой индекс в
+                    таблице</span> MFT. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Подобно
+      системам</span> FAT, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>система</span> NTFS <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>состоит из кластеров</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Тем
+        не менее</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>несколько усовершенствований сделано по сравнению с</span> FAT. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Кластеры
+          могут иметь любой размер в секторах</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>кратный степени числа</span> 2, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>вне
+            зависимости от размера раздела</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Кластеры заполняют весь раздел
+              целиком</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>то есть кластер с номером</span> 0 <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>начинается
+                сразу в начале раздела</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Таким образом</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>по
+                  номеру кластера и его размеру однозначно вычисляется положения любого кластера
+    на диске</span>.</p>
+    <p align="center"><span
+style='color:windowtext'><img
+src="img/_img_5.PNG" width=711 height=185 border="1" v:shapes="_x0000_i1030"><br>
+      Топология раздела NTFS</span></p>
+    <p align="justify"><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Система</span> NTFS <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>допускает
+        криптование файлов</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>хранение их в сжатом виде</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>журналирование
+          файловых операций</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>индексирование файлов в каталогах по
+            произвольному атрибуту</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>а не только по имени</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Поиск
+              файла в каталоге является более оптимизированной операцией</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>чем
+                в системах</span> FAT. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Недостатком</span> NTFS <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>является
+                  то</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>что</span> MFT <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>является жизненно важной структурой</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>повреждение
+                    которой приводит к полной невозможности восстановить файлы</span>, <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>даже
+                      если они не фрагментированы</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Запись в каталоге лишь ссылается на
+                        запись в</span> MFT, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>которая содержит положение файла на диске в виде атрибута</span>. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Система</span> FAT, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>хотя
+                          и является более примитивной</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>но допускает восстановление
+                            нефрагментированного файла по записи в каталоге</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>которая
+                              указывает непосредственно первый кластер файла и его размер</span>.<br>
+    <span class="Section18"><a href="#top" target="_top" class="style4">наверх</a></span></p>
+  </div>
+  <div class=Section18 style8 style12>    <span style='color:windowtext'>
+    <o:p></o:p>
+  </span><span
+style='mso-bidi-font-family:&quot;Tahoma+ 1&quot;'><strong>HPFS<a name="HPFS"></a></strong>. </span><span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Данная
+      файловая система разрабатывалась фирмой</span> IBM <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>и является
+        далеким родственником</span> NTFS. <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Она используется преимущественно в
+          операционной системе</span> OS/2, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>но поддерживается также в ранних
+            версиях</span> Windows NT. HPFS <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>обладает
+      лучшими характеристиками по сравнению с</span> FAT, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>каталоги
+        представлены в виде дерева</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>что позволяет довольно быстро искать
+          необходимые файлы в больших каталогах</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>а также сортировать файлы по имени</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Кластеры
+      в этой файловой системе отсутствуют</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>выделение свободного места осуществляется
+        посекторно</span>. <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>Весь раздел делится на участки длиной</span> 8<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Мб</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>свободное
+          место в каждом участке описывается битовой картой</span>. <span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Это
+            упрощает выделение места под файлы</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>поскольку перемещение головой
+              достаточно проводить к ближайшей битовой карте</span>, <span style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>а не к началу
+                диска</span>, <span style='mso-bidi-font-family: &quot;Times New Roman+ 1&quot;'>как в системе</span> FAT.<span
+style='mso-bidi-font-family:&quot;Times New Roman+ 1&quot;'>Данная
+  файловая система используется как основная файловая система для</span> Linux.<br>
+  <a href="#top" target="_top" class="style4">наверх</a></div>
+</DIV>
+<div align="justify"></div>
+</body>
+</html>

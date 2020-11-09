@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf8" />
+    <title>Медиа-курс "Жёсткий диск"</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../../css/ui-darkness/jquery-ui-1.9.2.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/lightbox.css"  />
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+  	<script type="text/javascript" src="../../js/jquery-1.8.2.min.js"></script>
+  	<script type="text/javascript" src="../../js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="../../js/lightbox.js"></script>
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+  	<!--[if lt IE 9]>
+  	<script src="../../js/html5.min.js"></script>
+  	<![endif]-->
+  </head>
+	<body id="section6-1">
+    <div id="wrapper">
+        <a id="back" href="../../../start.html" title="Назад на главную"></a>
+
+        <h1>6. Логическая организация данных</h1>
+        <div class="section">
+          <h2>6.1 Устройство HDD</h2>
+          <p>Жесткий диск (НDD - Hard Disk Drive) устроен следующим образом: на шпинделе, соединенным с электромотором, расположен блок из нескольких дисков (блинов), над поверхностью которых находятся головки для чтения/записи информации. Форма головкам придается в виде крыла и крепятся они на серпообразный поводок. При работе они "летят" над поверхностью дисков в воздушном потоке, который создается при вращении этих же дисков. Очевидно, что подъемная сила зависит от давления воздуха на головки. Оно же, в свою очередь, зависит от внешнего атмосферного давления. Поэтому некоторые производители указывают в спецификации на свои устройства предельный потолок эксплуатации (например, 3000 м). Диск разбит на дорожки (или треки), которые в свою очередь поделены на сектора. Две дорожки, равноудаленные от центра, но расположенные по разные стороны диска, называются цилиндрами.</p>
+          <p>Цилиндры, головки и секторы. На физическом уровне диск имеет три степени свободы для указания того места, где информация будет записываться или считываться:</p>
+           <ul>
+             <li>Цилиндр. При вращении дисков с магнитным покрытием головки двигаются по окружности относительно пластин. При этом все они находятся на определенном расстоянии от центра диска. Совокупность этих круглых траекторий головок на всех поверхностях дисков, находящихся на одном удалении от центра, называют цилиндром. Поскольку магнитные головки жестко связаны друг с другом, то они перемещаются синхронно и одновременно находятся в одном и том же цилиндре. Для установки головок на заданный цилиндр необходимо привести в движение блок головок, для чего требуется время порядка 120 миллисекунд.</li>
+             <li>Головка. Несколько поверхностей обеспечивают дополнительную возможность выбора. Для перехода от одной головке к другой не требуется никакого времени, так как при этом переключение осуществляется без привлечения механических узлов.</li>
+             <li>Сектор. <a href="img1.jpg"><img src="img1.jpg" width="210" height="131" align="right" alt="" title="Разбиение сектора" /></a>Один блок информации является относительно небольшой порцией данных, которая территориально соответствует небольшой дуге окружности. Если смотреть из центра, то такие дуги размещаются в одном угловом секторе. Строго говоря, на современных дисках это не так, поскольку длины окружностей возрастают с увеличением радиуса, а размер одного бита всюду одинаков. Таким образом, на длинных дорожках помещается больше битов, а, стало быть, больше блоков данных. Для выбора сектора на дорожке двигать головки не нужно, зато нужно ждать, когда пластины повернутся так, чтобы адресная метка сектора подошла к головкам чтения/записи. При скорости вращения диска порядка 5-7 тысяч оборотов в минуту время ожидания сектора оказывается порядка 8-10 миллисекунд. Это время даже больше времени перемещения головок, однако, после их перемещения метку сектора все равно приходится искать, так что смена цилиндра является самой длинной операцией при поиске информации.</li>
+           </ul>
+          <p><strong>CHS</strong> – трехмерный адрес сектора, где С – номер цилиндра, H – номер головки, S  - номер сектора.</p>
+          <p>Количество секторов на диске = C*H*S</p>
+          <p>ИМ – индексный маркер.<br />
+          Gi – индексные промежутки.<br />
+          Секторi – номер i-го сектора.<br />
+          W/R – интервал переключения запись/чтение.<br />
+          Gap – промежуток конца дорожки.</p>
+          <p>IDi – поле идентификатора.<br />
+          Ri – поле данных.</p>
+          <p>АМ – адресный маркер.<br />
+          CRC – байты контроля.</p>
+          <p>DM – маркер данных.<br />
+          R – данные.<br />
+          ECC – код коррекции ошибки.</p>
+          <p>Первые жесткие диски обладали относительно небольшим числом цилиндров, головок и секторов и, вдобавок, не имели такого умного контроллера как сегодняшние. Поэтому адресация блоков у них производилась указанием трех чисел, номера цилиндра, головки и сектора, и эти номера соответствовали физической организации данных. Со временем это стало не так. На разных цилиндрах находится разное число секторов. Контроллеры современных дисков сами выдумывают некоторую виртуальную геометрию диска, которую сообщают компьютеру. Поэтому ценность такого трехкоординатного указания адреса теряется, и такой способ постепенно отмирает, оставляя лишь проблемы с совместимостью.</p>
+        </div><!-- .section -->
+
+        <div class="section" id="section6-2">
+          <h2>6.2 Зонная запись</h2>
+          <p>В современных НЖМД для повышения их емкости за счет более эффективного использования поверхности дисков, организуют разное количество секторов на дорожках: на внешних - больше, на внутренних - меньше. Таким образом, группы дорожек (зоны), расположенные ближе к краю дисков имеют большее количество секторов, а расположенные ближе к центру – меньшее. Количество зон на диске может быть от 9 до 18. Итак, на всех дорожках одной зоны содержится одинаковое количество секторов, однако в каждой из зон – разное количество дорожек. </p>
+          <p>Такой метод повышения емкости получил название Zoned-Bit Recording (зонная запись). Это делается только в накопителях, конструктивно совмещенных с <span class="definition controller">контроллером</span> (использующих интерфейс IDE или SCSI).</p>
+          <p>DOS и <span class="definition bios">BIOS</span> не могут понять того, что у диска может быть различное число секторов на различных дорожках. Однако именно по такому принципу строятся самые современные жесткие диски. Ведь операционная система может работать только при постоянном количестве секторов на дорожках.</p>
+          <a href="img2.jpg"><img src="img2.jpg" width="324" height="186" align="left" alt="" title="Зонная запись" /></a>
+          <p>Поэтому контроллер НЖМД показывает системе не реальные параметры накопителя (с переменным количеством секторов), а то количество цилиндров, головок и секторов, произведение которых (с учетом размера сектора) дает реальную емкость НЖМД.</p>
+          <p>При этом, поступающие при запросе системы в контроллер накопителя такие логические номера цилиндров, дорожек и секторов преобразовываются им в конкретные физические номера, которые получаются совершенно безразличны для пользователя.</p>
+          <p>Существуют два режима, позволяющих использовать такой диск для работы с DOS, и, следовательно, с PC:</p>
+          <ul>
+            <li>
+              <strong>ECHS (Extended CHS) или Large Disk</strong> – общение с диском происходит в преобразованной трехмерной системе (измененные номера цилиндров и головок).
+              <p>Этот фиктивный дисковод (используемый при доступе к информации по запросам DOS) может иметь практически произвольный набор чисел, определяющих количество его головок, секторов на дорожке и цилиндров. Эти преобразованные параметры записываются в CMOS. Но методов трансляции может быть много и из-за их несовпадения возможна несовместимость дисков, размеченных при разных версиях BIOS.</p>
+            </li>
+            <li>
+              <strong>LBA (Logical Block Addressing)</strong> - при работе используется логическая блоковая адресация.
+              <p>Каждому сектору ставится в соответствие линейный адрес, который вычисляется однозначно в естественном порядке счета. Сектору с нулевым линейным адресом соответствует первый сектор нулевой головки нулевого цилиндра.</p>
+              <p>LBA=(CYL*HDS+HD)*SPT+SEC-1, где CYL, HD, SEC – номера цилиндра, головки и сектора в пространстве CHS
+              HDS – количество головок;
+              SPT – количество секторов на треке.</p>
+            </li>
+          </ul>
+        </div><!-- .section -->
+
+        <div id="footer">
+           <div class="text_bru"><strong>Руководитель:</strong> Прудников В.М.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Разработчики:</strong> Лакей Е.А., Снопков Е.И.<br />БРУ, Электротехнический факультет,  кафедра АСУ &copy; 2012</div>
+        </div>
+    </div><!-- #wrapper -->
+
+	<div id="toc-holder" class="toc-holder">
+  		<a href="#" class="toc-link" id="toc-link" onclick="return false;"><span>&#9660;</span> Содержание</a>
+  		<ul id="toc" class="toc">
+  		<li class="toc-h1"><a href="#">1. Конструкция НЖМД</a>
+      	<ul class="toc-sub closed">
+  				<li><a href="../construction/index.html#section1-1">1.1&nbsp; Введение</a></li>
+  				<li><a href="../construction/index.html#section1-2">1.2&nbsp; Корпус</a></li>
+  				<li><a href="../construction/index.html#section1-3">1.3&nbsp; Пакет магнитных дисков</a></li>
+  				<li><a href="../construction/index.html#section1-4">1.4&nbsp; Двигатель и элемнеты привода шпинделя</a></li>
+  				<li><a href="../construction/index.html#section1-5">1.5&nbsp; Блок магнитных головок</a></li>
+  				<li><a href="../construction/index.html#section1-6">1.6&nbsp; Печатная плата с электронными компонентами</a></li>
+  				<li><a href="../construction/index.html#section1-7">1.7&nbsp; Кэш-буфер НЖМД</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section2">2. Механизм привода и автоматической парковки головок</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-1">2.1&nbsp; Устройство механизма привода и автоматической парковки головок</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-2">2.2&nbsp; Механизм привода с шаговым двигателем</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-3">2.3&nbsp; Механизм привода с подвижной катушкой</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-4">2.4&nbsp; Система обратной связи</a></li>
+  				<li><a href="../drive-and-heads-mechanism/index.html#section2-5">2.5&nbsp; Автоматическая парковка головок</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section3">3. Процесс работы HDD</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../process-work/index.html#section3-1">3.1&nbsp; Пpи включении</a></li>
+  				<li><a href="../process-work/index.html#section3-2">3.2&nbsp; Во вpемя pаботы</a></li>
+  				<li><a href="../process-work/index.html#section3-3">3.3&nbsp; Пpи отключении</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section4">4. Интерфейсы</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../interfaces/index.html#section4-1">4.1&nbsp; Интерфейс ATA</a></li>
+  				<li><a href="../interfaces/index.html#section4-2">4.2&nbsp; Интерфейс SATA</a></li>
+  				<li><a href="../interfaces/index.html#section4-3">4.3&nbsp; Интерфейс SCSI</a></li>
+  				<li><a href="../interfaces/index.html#section4-4">4.4&nbsp; Интерфейс SAS</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section5">5. Чтение, запись на HDD</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../read-write/index.html#section5-1">5.1&nbsp; Чтение HDD</a></li>
+  				<li><a href="../read-write/index.html#section5-2">5.2&nbsp; Запись на HDD</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section6">6. Логическая организация данных</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../logical-data/index.html#section6-1">6.1&nbsp; Устройство HDD</a></li>
+  				<li><a href="../logical-data/index.html#section6-2">6.2&nbsp; Зонная запись</a></li>
+  			</ul>
+  		</li>
+
+  		<li class="toc-h1"><a href="#section7">7. Подготовка к использованию</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../preparation-for-use/index.html#section7-1">7.1&nbsp; Введение</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-2">7.2&nbsp; Конфигурирование устройства. Подключение интерфейсного и питающего кабелей</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-3">7.3&nbsp; Установка параметров НЖМД в CMOS Setup</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-4">7.4&nbsp; Разбиение на разделы</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-5">7.5&nbsp; Логическое форматирование</a></li>
+  				<li><a href="../preparation-for-use/index.html#section7-6">7.6&nbsp; Создание системного диска</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section8">8. Параметры дисковых накопителей</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../parameters/index.html#section8-1">8.1&nbsp; Общие параметры</a></li>
+  				<li><a href="../parameters/index.html#section8-2">8.2&nbsp; Параметры организации конфигурации</a></li>
+  				<li><a href="../parameters/index.html#section8-3">8.3&nbsp; Параметры быстродействия и производительности</a></li>
+  				<li><a href="../parameters/index.html#section8-4">8.4&nbsp; Параметры надежности  и достоверности хранения данных</a></li>
+  				<li><a href="../parameters/index.html#section8-5">8.5&nbsp; Физические параметры</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section9">9. Тестирование</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../testing/index.html#section9-1">9.1&nbsp; SMART</a></li>
+  				<li><a href="../testing/index.html#section9-2">9.2&nbsp; ZD WinBench 99</a></li>
+  				<li><a href="../testing/index.html#section9-3">9.3&nbsp; HddSpeed</a></li>
+  				<li><a href="../testing/index.html#section9-4">9.4&nbsp; HD Tune</a></li>
+          <li><a href="../testing/index.html#section9-5">9.5&nbsp; Victoria</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-h1"><a href="#section10">10. RAID-массивы</a>
+  			<ul class="toc-sub closed">
+  				<li><a href="../raid/index.html#section10-1">10.1&nbsp; Дисковый массив RAID</a></li>
+  				<li><a href="../raid/index.html#section10-2">10.2&nbsp; Типы(уровни) RAID</a></li>
+  				<li><a href="../raid/index.html#section10-3">10.3&nbsp; Сравнительная характеристика стандартных уровней RAID</a></li>
+  				<li><a href="../raid/index.html#section10-4">10.4&nbsp; Контроллеры RAID</a></li>
+  				<li><a href="../raid/index.html#section10-5">10.5&nbsp; Типы контроллеров RAID</a></li>
+  				<li><a href="../raid/index.html#section10-6">10.6&nbsp; Специальные технологии RAID-контроллеров</a></li>
+  				<li><a href="../raid/index.html#section10-7">10.7&nbsp; RAID 0-50</a></li>
+  			</ul>
+  		</li>
+  		<li class="toc-click"><a href="../video/index.html">Видеоматериал</a></li>
+  		<li class="toc-click"><a href="../literature/index.html">Литература</a></li>
+  	</ul>
+  	</div><!-- #toc-holder -->
+    <a href="#top" class="top-link" id="top-link">&#9650; Наверх</a>
+    <script type="text/javascript" src="../../js/menu.min.js"></script>
+  </body>
+</html>

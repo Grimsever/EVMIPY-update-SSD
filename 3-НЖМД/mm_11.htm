@@ -1,0 +1,1150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Интерфейсы ATA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+<!--
+.style4 {color: #0000FF}
+.style5 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style7 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 80%; }
+.style8 {font-family: Verdana, Arial, Helvetica, sans-serif}
+div.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+li.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+#Layer1 {
+	position:absolute;
+	left:10px;
+	top:1721px;
+	width:136px;
+	height:16px;
+	z-index:1;
+}
+.style11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 85%; }
+div.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section13 {page:Section13;}
+div.Section14 {page:Section14;}
+div.Section15 {page:Section15;}
+li.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section17 {page:Section17;}
+div.Section18 {page:Section18;}
+li.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section27 {page:Section27;}
+li.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+-->
+</style>
+</head>
+<body background="img/green.jpg" class="style7" STYLE="background-repeat:repeat-y;">
+<h4 align="left"><u><a name="top"></a><span class="style11">Интерфейсы ATA</span></u></h4>
+<table width="541" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="31" valign="top">&nbsp;</td>
+    <td width="20" align="left" valign="top"> <a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td width="490"> <u><a href="mm_11.htm#Pata">Параллельный интерфейс</a><a href="mm_10.htm#Общие_параметры_диска"></a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="left" valign="top"><a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td><u><a href="mm_11.htm#Sata">Последовательный интерфейс</a><a href="mm_10.htm#Параметры_организации"></a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td align="left" valign="top"><a href="mm_01.htm#&#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;"><img src="img/proced.gif" alt="" width="20" height="18" border="0"></a></td>
+    <td><u><a href="mm_11.htm#Протоколы">Протоколы и режимы передачи данных</a></u></td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+    <td valign="top"><A HREF="index.htm"><img src="img/bkarrow.gif" alt="Back to beginning" width="20" height="18" border="0"></a></td>
+    <td bordercolor="#ECE9D8" class="style8"><A HREF="index.htm" class="style5"> Назад к оглавлению </a></td>
+  </tr>
+</table>
+<p><strong>Параллельный интерфейс АТА<a name="Pata"></a></strong> представляет собой шину, в которой все сигналы соответствуют стандартной логике ТТЛ:</p>
+<ul>
+  <li> высокий уровень выходного сигнала не ниже 2,4 В (при токе до 400 мкА, сигнал DMARQ — до 500 мкА), низкий уровень не выше 0,5 В (при токе 4 мА, для линии DASP ради совместимости со старыми устройствами — 12 мА);</li>
+  <li> высокий уровень входного сигнала не ниже 2,0 В, низкий уровень не выше 0,8 В.</li>
+</ul>
+<p> Все информационные сигналы интерфейса передаются через 40-контактный разъем, у которого ключом является отсутствующий на вилке и закрытый на розетке контакт 20. Использование в качестве ключа выступа на корпусе розетки и прорези в бандаже вилки стандартом не приветствуется. Для соединения устройств применяется плоский многожильный кабель-шлейф, длина кабеля не должна превышать 0,46 м (18&quot;), допустимая емкость проводников — не более 35 пФ. Терминаторы стандартом не предусматриваются (они имеются в каждом устройстве и хост-адаптере), но если кабель с тремя разъемами (розетками) используют для подключения одного устройства, то устройство и хост-адаптер рекомендуется подключать к противоположным концам кабеля. В большинстве кабелей одноименные контакты всех разъемов соединяются своими проводами и все коннекторы равноправны. Встречаются (редко) ленточные кабели с кабельной выборкой, изображенные на рис. 1. В них провод 28 перерезан, так что контакт 28 (CSEL) для ведущего устройства заземлен через хост-адаптер, а для ведомого — не подключен. Кабель должен соответствовать системе адресации, выбранной для обоих устройств.</p>
+<p align="center"><img src="img/_img_10.PNG" width="424" height="173" border="1"><br>
+рис. 1 - Ленточный кабель АТА с выборкой.</p>
+<p align="left"> Начиная с ATA/ATAPI-4 в шлейфах узаконили кабельную выборку и для подключения устройства 1 определили средний коннектор. В нем контакт 28 либо не соединен с проводом, либо просто отсутствует. Вполне понятно, что при использовании кабельной выборки хост-контроллер подключать к среднему коннектору нельзя (как и к правому на рис. 9.3). Если номер устройства назначается джампером, то для 40-проводного кабеля можно подключать устройства и хост-контроллер к любым коннекторам произвольно (но желательно избегать «висячих» концов).
+Для устойчивой работы в режиме Ultra DMA рекомендуется применение 80-про-водных кабелей, обеспечивающих чередование сигнальных цепей и проводов схемной земли (GND). Такие кабели требуются для режимов UltraDMA выше 2 (скорость выше 33 Мбайт/с). Эти кабели разделываются на специальные разъемы, имеющие 40-контактные гнезда с обычным назначением контактов, но ножевые контакты для врезки 80 проводов. В шлейфе для схемной земли используются либо все четные, либо все нечетные провода — это зависит от применяемых разъемов (на них должна быть маркировка EVN GND или ODD GND соответственно).</p>
+<p align="left">Установка на одном шлейфе разнотипных разъемов недопустима (тогда все 80 проводов окажутся соединенными вместе). На 80-проводном кабеле в разъеме для подключения контроллера контакт 34 соединен с шиной GND и не соединен с проводом шлейфа; этим обеспечивается идентификация типа кабеля (CBLID). Провод шлейфа соединяет контакты 34 разъемов устройств, что обеспечивает прохождение сигнала PDIAG* от ведомого устройства к ведущему. С учетом возможности кабельной выборки на 80-проводном шлейфе положение коннекторов уже однозначно.<br>
+  *   Коннектор хост-контроллера расположен на конце шлейфа, у него контакт 34 заземлен и не соединен со шлейфом. Корпус коннектора должен быть синего цвета.<br>
+  *   Коннектор устройства 0 расположен на противоположном конце шлейфа, у него все контакты соединены со шлейфом. Корпус коннектора должен быть черного цвета.<br>
+  *   Коннектор устройства 1 (необязательный) расположен в середине шлейфа, у него контакт 28 не соединен со шлейфом. Корпус коннектора должен быть серого цвета.<br>
+  Если кабельная выборка не используется, то устройства 0 и 1 можно менять местами.<br>
+Спецификация АТА «узаконивает» как 40-контактный интерфейсный разъем, так и 4-контактный разъем питания (рис. 9.4), но для малогабаритных устройств питание может подаваться по 44-проводному интерфейсному кабелю.</p>
+<p align="center"><img src="img/_img_9.PNG" width="338" height="83" border="1"><br>
+Разъемы интерфейса АТА (вилки на устройствах): а — интерфейсный, б — питания</p>
+<p align="left"><a href="#top" target="_top" class="style4">наверх</a></p>
+<p align="left"><br>
+  <strong>Интерфейс Serial ATA</strong><a name="Sata"></a></p>
+<p>Традиционный, параллельный ATA интерфейс хорошо зарекомендовал себя благодаря своей простоте и низкой стоимости реализации (пусть даже и предоставляя гораздо меньшее число удобств и преимуществ и худшую производительность по сравнению с другими, но, тем не менее, удовлетворяющую нуждам большинства обычных ПК), но дальнейшее его развитие стало сопрягаться с большим числом технологических трудностей, и назрела необходимость разработать новый интерфейс для замены. Часто среди обоснований перехода на новый стандарт в статьях называют ограниченную скорость передачи параллельного интерфейса в 133 мбайт/с, но это ограничение конкретной его версии, а не его вида вообще (а у Serial ATA не намного-то и больше - 150 Мбайт/с).</p>
+<p>Дальнейшее увеличение пропускной способности возможно и при параллельной шине, причем для нее большая скорость естественней, чем для последовательной, но такая модернизация - дорогостоящее удовольствие (взгляните на приборы SCSI) и при достигнутых скоростях на последовательной шине, просто экономически нецелесообразно. Это раз. В старом интерфейсе использовались сигналы высокого уровня 5V, а при современном технологическом процессе получить их на выходе микросхем очень сложно и в общем-то даже невозможно. Это два. Это основные причины. Называемые улучшение вентилируемости, сокращение числа проводов, упрощение технологии шлейфов и сокращение затрат на производство - являются лишь следствием. Но не будем забегать вперед.</p>
+<p><strong>Как все начиналось</strong></p>
+<p>Работа над SerialATA была начата еще 4 года назад. Версия 0.9 спецификации была представлена на Intel Developer Forum 2000, и окончательно доработанная 1.0 - в конце того же года. Первые продукты начали появляться в 2001 году, а массовое производство, как и сказал инженер Steve Collins компании Seagate в интервью Андрею Кузину на Cebit 2001 началось полтора года спустя - в 2002-2003 годах, т.е. сейчас. </p>
+<p>В разработке стандарта принимали и принимают участие многие серьезные компании. Изначально в рабочую группу входили APT Technologies, Dell, IBM, Intel, Maxtor, Quantum и Seagate Technologies. Подключение новых игроков происходило очень быстро и сейчас список участников проекта очень велик. Продвигается стандарт на рынок сейчас в основном стараниями VITESSE, Dell, Intel, Maxtor и Seagate - так называемой промогруппой Serial ATA.</p>
+<p>Как несложно догадаться по именам разработчиков и из названия самого стандарта - Serial ATA - высокоскоростной последовательный интерфейс предназначенный для устройств хранения. По своей внутренней организационной структуре - четырехуровневой модели - он очень похож на другие стандарты, например USB или SCSI-3 которые в свою очередь всегда напоминали мне модель OSI сетей передачи данных. В последовательном ATA декомпозиция выполнена следующим образом:</p>
+<div align="center"><img src="img/10000004.jpg" alt="" width="450" height="356" border="0"></div>
+<p>Не нужно объяснять, что использование многоуровневой модели дает возможность для гибкого дальнейшего совершенствования стандарта, доработкой только необходимых уровней и не правя весь стандарт сразу.</p>
+<p>Для компьютера в котором установлен Serial ATA принципиально ничего не меняется, взаимодействие операционной системы через драйвер контроллера в целях обеспечения совместимости с предыдущими версиями ATA оставлено прежним. Наглядно сходства и различия можно представить так:</p>
+<div align="center"><img src="img/20000001.jpg" alt="" width="450" height="281" border="0"></div>
+<p>В привычном параллельном ATA два устройства объединяются кабелем в цепочку и подключаются к одному порту контроллера. Взаимодействие приложения и устройства происходит через операционную систему и драйвер контроллера.</p>
+<div align="center"><img src="img/30000001.jpg" alt="" width="450" height="276" border="0"></div>
+<p>На этом рисунке блоки определенного цвета функционально идентичны блокам соответствующего цвета с предыдущего рисунка. Видно, что функционирование приложений, операционной системы и драйверов осталось без изменений. Интерфейс между контроллером нового стандарта и драйвером (левая часть блока "контроллер") остался прежним: новый Serial ATA полностью эмулирует <a href="#Pata">Parallel ATA</a>: использует для обмена те же регистры и команды. Изменилось лишь взаимодействие между ним и непосредственно дисками. Сразу же обращает на себя внимание то, что для подключения тех же двух устройств контроллер уже имеет два порта, и каждый накопитель подключается отдельным кабелем.</p>
+<p>В новом Serial ATA нет понятия ведомого и ведущего устройства (Master/Slave). Наконец-то пришла пора прекратить тягать перемычки из своих винчестеров. Все подключенные накопители являются независимыми устройствами и их работа выглядит с точки зрения старого стандарта как Master with no Slave Present (но не нужно боятся вероятных проблем со старым ПО в этом месте: из соображений совместимости предусмотрена возможность эмуляции работы устройств в режиме Master+Slave: в зависимости от бита, использующегося для определения устройства назначения на шине, обращения просто распределяются между портами SATA, хотя в этом режиме оказываются недоступными многие из возможностей новой шины). Чисто внешние различия на этом заканчиваются. Остальные - внутри.</p>
+<p><strong>Физический уровень</strong> занимается передачей битов по физическим каналам связи. Здесь определяются основные характеристики среды используемой для передачи данных и характеристики электрических сигналов. </p>
+<p><em>Сигналы.</em> Мы уже вскользь касались этого вопроса. При современных технологиях использование 5-ти вольтовых сигналов стало очень затруднительно, и кроме того, с ростом скорости работы возникают дополнительные сложности при переключении из одного состояния в другое. С такой проблемой уже однажды столкнулась SCSI, и сейчас, в Serial ATA был использован тот же подход. Уровень сигналов снижен и составляет 250 мв. </p>
+<p><em>Способ передачи.</em> Кроме того, вместо использовавшейся раннее в ATA однополярной передачи, обладающей низкой помехоустойчивостью, применена двухполярная (или еще ее называют дифференциальной. Снова же, так как и SCSI). Преимущество ее в гораздо большей помехозащищенности. При дифференциальной передаче по двум проводам передается один и тот же сигнал, но разной полярности. Шумы наводимые в проводах симметричны, и сложив оба полученных разнополярных сигнала можно получить шум, а вычев его из полученного сигнала - непосредственно чистый переданный сигнал. Собственно использование дифференциальной передачи и дало возможность снизить уровни используемого сигнала. Для кодирования передаваемой информации используется потенциальный код без возвращения к нулю (Non Return to Zero, NRZ). Он является одним из самых простых в реализации, благодаря двум резко различающимся потенциалам обладает хорошей распознаваемостью ошибок, но не обладает необходимым свойством самосинхронизации. Но с этим недостатком в SATA успешно борются гениально простым методом, о котором скажем ниже. </p>
+<p><em>Физическая среда.</em> Ключевой момент, ради которого то все и было затеяно: используется не параллельная физическая шина, а последовательная, состоящая из 2-х пар проводов (одной передачи и одной на прием) и несколько нулевых. Всего семь. Провод которыми соединяются устройство последовательной ATA становится таким образом тонким и круглым, гибким и удобным в использовании, не препятствует воздухообмену. </p>
+<div align="center"><img src="img/40000002.jpg" alt="" width="500" height="246" border="1"><br>
+    <br>
+<img src="img/50000001.jpg" alt="" width="255" height="200" border="1"></div>
+<p>С другой стороны, изготовление провода функционирующего на столь высоких скоростях, как у Serial ATA, и при этом обладающего высокими механическими характеристиками, пусть и содержащего всего 7 проводов, обходится вряд ли дешевле, чем обычного 80-ти жильного. И если где-то и содержится возможность снижения стоимости пользования, как обещано разработчиками изначально, то вряд ли здесь. Зато безусловно задача согласования (терминирования) решается теперь намного и дешевле. А длина кабелей может достигать 1 метра. SATA может быть не только интерфейсом внутренних устройств хранения, но и… внешниих… </p>
+<p>Разъемы. Так как проводов мало, то разъемы соответственно получаются очень компактными и удобными в использовании. На рисунке для сравнения представлены коннекторы традиционного параллельного (справа, стоит ли говорить) и нового последовательного интерфейса (слева):</p>
+<div align="center"><img src="img/60000001.jpg" alt="" width="450" height="192" border="0"></div>
+<p> Разъем питания по размерам теперь превосходит разъем data-кабеля. Конструктивно они оба выполнены с защитой от дурака: предусмотрен сложный ключ и вставить по другому их просто нельзя, в отличие от интерфейса ATA, где такую защиту, похоже, придумывали на скорую руку потом, пытаясь сохранить совместимость с версиями без оной. В результате вряд ли есть сегодня человек, который бы хоть раз не подключил IDE шлейф неправильно. А шире разъем питания по тому, что контакты в нем больше и надежнее. И их не 4, как в старом разъеме, - добавилась возможность использовать питание 3.3v.</p>
+<div align="center"><img src="img/70000001.jpg" alt="" width="450" height="302" border="1"></div>
+<p>Предвижу вопрос: а откуда же брать питание для SATA дисков? Ответ: обычное через специальный переходник</p>
+<div align="center"><img src="img/80000001.jpg" alt="" width="213" height="141" border="1"></div>
+<p>Спецификация SATA жестко не ограничивает размещение основных разъемов и выполнение дополнительных, и предлагает несколько вариантов. Один родной, а второй как всегда, для поддержки ошибок предыдущих версий.</p>
+<p>Вариант 1.
+<div align="center"><img src="img/90000001.jpg" alt="" width="322" height="73" border="0"></div>
+</p>
+Вариант 2.
+<div align="center"><img src="img/10000005.jpg" alt="" width="441" height="103" border="0"></div>
+</p>
+<br>
+Физический уровень осуществляет над поступившим кадром необходимые преобразования - конвертирует в последовательность, кодирует и выдает в линию и тоже самое в обратном порядке, когда получает данные с физической шины, т.е. от другого устройства. Взаимодействие физического уровня с вышележащим происходит по параллельной шине шириной 10, 20, 40 или другой, на усмотрение разработчика.
+<p><strong>Канальный уровень</strong> выполняет функции арбитража и результата выполнения операций передачи данных, скремблирование, а также реализует механизмы обнаружения и коррекции ошибок. Теперь обо всем подробней. </p>
+<p><em>Арбитраж и контроль передачи.</em> Сам по себе физический уровень может только передавать данные, поступившие на его вход. Для предотвращения конфликтов, когда одновременно и устройство, и хост контроллер хотят передать данные, на канальном уровне предусмотрен специальный механизм контроля, получивший название арбитража. Кроме того в обязанности канального уровня входит слежение за тем, были ли данные успешно переданы и сообщение об этом вышестоящему - транспортному уровню. Легко сообразить зачем это нужно. </p>
+<p><em>Обнаружение и коррекция ошибок.</em> В отличие от стандарта ATA, который различными механизмами обнаружения и коррекции ошибок обрастал по мере роста быстродействия, т.е. тогда, когда припирало и без них было не обойтись, в Serial ATA несколько механизмов заложены изначально. Во-первых, хорошей распознаваемостью обладает используемый на физическом уровне NRZ. Но это не главное, ряд ошибок может успешно его миновать. Как метод применяется избыточное кодирование 8B/10B. Суть его проста: 8 бит исходных данных дополняются 2-мя дополнительными битами. Итого получается 10 бит - т.е. 1024 возможных битовых комбинаций может быть в получившемся коде, в то время как в исходном - только 256. </p>
+<p>Из результирующего кода отбирают 256 комбинаций, которые будут соответствовать 256-ти комбинациям исходного кода, а остальные считают запрещенными. Это позволяет распознавать искажение данных - если принята запрещенная последовательность, то при передаче произошла ошибка. Кроме того, в Serial ATA используется CRC код. О нем, не буду подробно, так как многие наверное наслышаны. Кстати то, что жесткие диски с SATA имеют максимальную скорость обмена по интерфейсу в 150 Мбайт в секунду, при том, что для SATA заявлена скорость передачи на физическом уровне в 1.5 Гбит/с, объясняется использованием избыточного 8B/10B кодирования, снижающего полезную пропускную способность интерфейса до 1.2 Гбит/с. </p>
+<p><em>Скремблирование.</em> Код NRZ, используемый на физическом уровне не обладает свойством самосинхронизации, так как при последовательности нулей или единиц сигнал в линии просто превращается в постоянный сигнал определенного уровня. Скремблирование помогает бороться с этим явлением, перемешивая данные, подлежащие передаче определенным образом так, чтобы вероятность появления единиц и нулей на выходе была приблизительно одинаковой. </p>
+<p>Работает канальный уровень так: получает информационный кадр от транспортного, выполняя логическое кодирование и вычисление CRC, и спускает вниз - к физическому уровню. При получении данных от физического порядок действия обратный. </p>
+<p>Задачей <strong>транспортного уровня</strong> является обеспечение вышележащим протоколам передачи с той степенью надежности, которая им требуется. Он упаковывает поступившие от прикладного уровня ATA команды в кадры и предает их следующему, или распаковывает поступившие снизу данные и передает на прикладной уровень. Задачей <strong>прикладного уровня</strong> является организация взаимодействия между драйвером контроллера и всего программного, что за ним дальше стоит и самим контроллером через блок регистров и портов. В SATA их набор расширен, но это уже нас занимает не так сильно. Особенно много об этих уровнях говорить нечего. </p>
+<p>Т.е. что и как происходит на конкретном этапе вам теперь должно быть более или менее понятно, а именно дать общее преставление о работе я сейчас хотел. О преимуществах нового стандарта писано уже много раз, и только ленивый не читал про это. Хотя на самом деле их не шибко то и много. С точки зрения производительности пожалуй даже вообще никаких (не говоря про то, что в связке ATA - SATA через переходник вообще может быть проигрыш). Принципиально новыми функциями стандарт не наделили. Разве что поддержка горячего подключения и замены появилась. Она описана в спецификации, но, увы, опционально и целиком и полностью ее реализация на совести производителя. Может быть в будущем что то появится… </p>
+<p><strong>А что может появиться?</strong><br>
+Программа развития стандарта составлена аж на десять лет вперед. В ней предусмотрена разработка трех версий. Первая - это та, которую мы имеем сегодня. Во второй будет в два раза увеличена пропускная способность - до 3 Гбит/с при сохранении полной совместимости с первой. А в третьей - до 6 Гбит/с. А вот совместимость будет под вопросом, говорится, что возможно будет механическая совместимость с предыдущими версиями. А может и нет. Электрическая быть должна. SATA II должна появится в середине следующего года, при том, что мы еще толком то и первой не видели. SATA III ожидается в середине 2007. Новую шину, наверное в обязательном порядке, будут учить думать - создавать очереди команд и их оптимизировать. Собственно говоря, это можно уже делать сегодня, но пока никто из производителей жестких дисков (а другая периферия на этой шине существует в крайне небольшом количестве, едва ли не в единичных экземплярах) не пытается ее воплотить в своих изделиях даже не смотря на то, что это обещает хороший прирост производительности, особенно в многозадачных средах. Дорого. Даже сейчас несмотря на все обещания разработчиков Serial ATA'ы диски с этим интерфейсом стоят дороже, равно как и оснащенные им материнские платы. Для тех применений где это действительно нужно существует SCSI, уже давно умеющий это делать. И вообще, мне кажется, что Serial ATA это попытки догнать быстрый уходящий поезд SCSI (вообще говоря, такую цель перед собой ставили разработчики). Но SCSI уже сегодня умеет очень много всего (о чем мы поговорим в отдельной статье), что и не снилось SATA и гораздо более высокие пропускные способности - 320 Мбайт/с уже доступны (Ultra320 SCSI), и ведутся работы над 640 Мбайт/с (Ultra640 SCSI)… И сложные громоздкие разъемы и дорогие кабеля тоже не аргумент - уже давно проработана поддержка последовательной физической среды.</p>
+<p align="left"><a href="#top" target="_top" class="style4">наверх</a></p>
+<p align="left"><strong>Протоколы и режимы передачи данных<a name="Протоколы"></a></strong></p>
+<div align="center">
+  <table width="577" border="1" cellpadding="0" cellspacing="0" bordercolor="#333333">
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Режим передачи </p></td>
+      <td width="119" valign="top"><p>Минимальное время цикла, не </p></td>
+      <td width="143" valign="top"><p>Скорость    передачи, Мбайт/с </p></td>
+      <td width="152" valign="top"><p>Интерфейс </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>PIO mode 0 </p></td>
+      <td width="119" valign="top"><p>600 </p></td>
+      <td width="143" valign="top"><p>3,3 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>PIO mode 1 </p></td>
+      <td width="119" valign="top"><p>383 </p></td>
+      <td width="143" valign="top"><p>5,2 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>PIO mode 2 </p></td>
+      <td width="119" valign="top"><p>240 </p></td>
+      <td width="143" valign="top"><p>8,3 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>PIO mode 3 </p></td>
+      <td width="119" valign="top"><p>180 </p></td>
+      <td width="143" valign="top"><p>11,1 </p></td>
+      <td width="152" valign="top"><p>E-IDE, АТА-2 (используется IORDY) </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>PIO mode 4 </p></td>
+      <td width="119" valign="top"><p>120 </p></td>
+      <td width="143" valign="top"><p>16,6 </p></td>
+      <td width="152" valign="top"><p>E-IDE, Fast АТА-2 (используется IORDY) </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Singleword DMA Mode 0 </p></td>
+      <td width="119" valign="top"><p>960 </p></td>
+      <td width="143" valign="top"><p>2,08 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Singleword DMA Mode 1 </p></td>
+      <td width="119" valign="top"><p>480 </p></td>
+      <td width="143" valign="top"><p>4,16 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Singleword DMA Mode 2 </p></td>
+      <td width="119" valign="top"><p>240 </p></td>
+      <td width="143" valign="top"><p>8,33 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Multiword DMA Mode 0 </p></td>
+      <td width="119" valign="top"><p>480 </p></td>
+      <td width="143" valign="top"><p>4,12 </p></td>
+      <td width="152" valign="top"><p>АТА </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Multiword DMA Mode 1 </p></td>
+      <td width="119" valign="top"><p>150 </p></td>
+      <td width="143" valign="top"><p>13,3 </p></td>
+      <td width="152" valign="top"><p>АТА-2 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Multiword DMA Mode 2 </p></td>
+      <td width="119" valign="top"><p>120 </p></td>
+      <td width="143" valign="top"><p>16,6 </p></td>
+      <td width="152" valign="top"><p>Fast АТА-2 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Ultra DMA Mode 0 </p></td>
+      <td width="119" valign="top"><p>120' </p></td>
+      <td width="143" valign="top"><p>16,6</p></td>
+      <td width="152" valign="top"><p>ATA/ATAPI-4 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Ultra DMA Mode 1 </p></td>
+      <td width="119" valign="top"><p>80' </p></td>
+      <td width="143" valign="top"><p>25 </p></td>
+      <td width="152" valign="top"><p>ATA/ATAPI-4 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Ultra DMA Mode 2 </p></td>
+      <td width="119" valign="top"><p>60' </p></td>
+      <td width="143" valign="top"><p>33 </p></td>
+      <td width="152" valign="top"><p>ATA/ATAPI-4 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Ultra DMA Mode 3 </p></td>
+      <td width="119" valign="top"><p>45' </p></td>
+      <td width="143" valign="top"><p>44,4 </p></td>
+      <td width="152" valign="top"><p>ATA/ATAPI-5 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Ultra DMA Mode 4 </p></td>
+      <td width="119" valign="top"><p>30' </p></td>
+      <td width="143" valign="top"><p>66,6 </p></td>
+      <td width="152" valign="top"><p>ATA/ATAPI-5 </p></td>
+    </tr>
+    <tr>
+      <td width="163" valign="top" bordercolor="#000000"><p>Ultra DMA Mode 5 </p></td>
+      <td width="119" valign="top"><p>20' </p></td>
+      <td width="143" valign="top"><p>100 </p></td>
+      <td width="152" valign="top"><p>ATA/ATAPI-6 </p></td>
+    </tr>
+  </table>
+</div>
+<p align="left"><a href="#top" target="_top" class="style4">наверх</a></p>
+<DIV></DIV>
+<div align="justify"></div>
+</body>
+</html>

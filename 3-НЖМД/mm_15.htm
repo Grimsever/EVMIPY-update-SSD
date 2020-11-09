@@ -1,0 +1,975 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Технология "антишок" (Shock protection HDD)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+<!--
+.style4 {color: #0000FF}
+.style5 {
+	color: #CC0000;
+	font-weight: bold;
+}
+.style7 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 80%; }
+.style8 {font-family: Verdana, Arial, Helvetica, sans-serif}
+div.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+li.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM49 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM50 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM57 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM59 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM6 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+#Layer1 {
+	position:absolute;
+	left:10px;
+	top:1721px;
+	width:136px;
+	height:16px;
+	z-index:1;
+}
+.style11 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 85%; }
+div.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section13 {page:Section13;}
+div.Section14 {page:Section14;}
+div.Section15 {page:Section15;}
+li.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM501 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM51 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM571 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM591 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM61 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default1 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section17 {page:Section17;}
+div.Section18 {page:Section18;}
+li.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM1 {mso-style-name:CM1;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM19 {mso-style-name:CM19;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM502 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM511 {mso-style-name:CM51;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:13.75pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM572 {mso-style-name:CM57;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:21.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM592 {mso-style-name:CM59;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:2.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM62 {mso-style-name:CM6;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:13.8pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default2 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+div.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+div.Section27 {page:Section27;}
+li.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+li.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.CM48 {mso-style-name:CM48;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.4pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM491 {mso-style-name:CM49;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:24.65pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.CM503 {mso-style-name:CM50;
+	mso-style-parent:Default;
+	mso-style-next:Default;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.15pt;
+	margin-left:0cm;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.Default3 {mso-style-name:Default;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+-->
+</style>
+</head>
+<body background="img/green.jpg" class="style7" STYLE="background-repeat:repeat-y;">
+<h4 align="left"><u><a name="top"></a><span class="style11">Технология "антишок" (Shock protection HDD)</span></u></h4>
+<table width="541" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="31" height="5">&nbsp;</td>
+    <td width="20" valign="top"><A HREF="index.htm"><img src="img/bkarrow.gif" alt="Back to beginning" width="20" height="18" border="0"></a></td>
+    <td width="490" bordercolor="#ECE9D8" class="style8"><A HREF="index.htm" class="style5"> Назад к оглавлению </a></td>
+  </tr>
+</table>
+<p>Жесткий диск устройство чрезвычайно хрупкое, пожалуй, даже самое хрупкое из всей компьютерной начинки. И не смотря на старания производителей, они все еще подвержены повреждениям в результате ударов и встрясок, последствия которых могут быть весьма и весьма трагичными. О технологиях увеличения ударостойкости разработанных различными производителями и пойдет речь сегодня.</p>
+<p>Наверное, все кто уже задался однажды целью оценить ударостойкость накопителей по информации из их спецификаций, столкнулись с тем, что измеряется оно в каких-то странных единицах G. И не понятно, совершенно, как же оно измеряется. Разберемся. </p>
+<p>Ударное воздействие (shock) - механическое воздействие очень малой длительности. Его последствия в ряде случаев могут быть определенны косвенным образом по энергии (или связанному с ней ускорению) приобретенной предметом вообще и накопителем в частности в результате такого воздействия. Ударостойкость накопителей определяет способность без последствий переносить определенные ударные нагрузки, и по объясненной выше причине и из соображений удобства измеряется в единицах, кратных ускорению свободного падения - G. Время ударного воздействия при определении ударостойкости накопителей, значения которой обычно приводятся в спецификации на них, выбрано равным 2 мс. Это сделано потому, как все наиболее распространенные механические воздействия, которым подвергаются накопители, имеют эту или немного меньшую длительность. К таким воздействиям относятся: удар монтажного инструмента, удар о корпус компьютера и неаккуратная установка накопителя в него, падение винчестера при извлечении из заводской упаковки на стол и др. Ускорение приобретаемое винчестером в таких случаях обычно составляет порядка 50-250G. Уже установленный в корпус компьютера подвергается меньшим ударным нагрузкам при большей их длительности. Такие воздействия толчок, толчок в результате падения чего-либо на компьютер, падение самого компьютера сообщают диску ускорение порядка 20-50G при времени в 10-20 мс. Накопитель может быть подвержен ударному воздействию в выключенном состоянии, в компьютере или вне его, и во включенном, во время работы. Ударостойкость измеряется для обоих состояний, так как она очень сильно отличается (позже станет ясно почему). </p>
+<p>Результат ударных воздействий может быть самым плачевным: даже несмотря на отсутствие внешних повреждений, он постепенно может умирать. Изнутри. Дело в том, накопители на жестких магнитных дисках - устройства чрезвычайно точные, с, пусть и небольшим, но числом подвижных частей. При ударе возможно их взаимодействие и повреждение. О различных видах таких повреждений и взаимодействий подробнее будем говорить по мере упоминания технологий, в которых реализована борьба с ними. Отметим сейчас лишь то, что подвергнуться ударам накопители могут в любой момент своей жизни (и после нее:-)): при неаккуратной погрузке, при транспортировке в результате резкого торможения, при передаче диска вам на фирме, при установке, при переносе диска пользователем самостоятельно (особенно велика вероятность таких повреждений, если диск используется в качестве переносного, что в последнее время приобрело широкие масштабы) и во множестве других случаев.</p>
+<p>За давностию лет сложно уже сказать, какая технология была реализована раньше, какая позже. Придется вам довольствоваться лишь их описанием. Хотя, кажется, самой первой, во всяком случае из тех, которые были у всех на слуху стала технология Shock Protection System, разработанная и использовавшаяся фирмой Quan-tum. Ныне Quantum уже продал свое винчестерное подразделение компании Maxtor, вместе с потрохами в виде SPS, которой Maxtor теперь успешно пользуется. Всего было две версии Shock protection System: просто SPS и SPS II. Средства реализованные в первой были направлены на защиту диска в нерабочем состоянии, вторая обеспечивает надежность и во время работы. Сейчас Maxtor под SPS подразумевает именно SPS II, и дополнительных обозначений не делает. Итак… </p>
+<p>Самым распространенным явлением при ударе является шлепок головок. Механизм возникновения следующий: под воздействием перпендикулярной к поверхности дисков составляющей приобретенного ускорения, происходит отрыв головок от поверхности. </p>
+<p>Последующий возврат, обеспечиваемый упругой конструкцией держателей головки очень резкий, и головка при возврате ударяет по пластине, выбивая из поверхности микрочастицы (смотрим схему на рисунке).</p>
+<p align="center"><img src="img/20000000.jpg" alt="" width="500" height="239" border="0"></p>
+<p>В результате такого возврата может повредиться и сама головка. В зависимости от того, где находилась головка в момент удара, последствия могут быть разными. Если при выключенном накопителе в парковочной зоне - удар с ненулевой вероятностью может пройти безболезненно. Поверхность с выбитыми частицами не используется, если головка осталась цела и частицы не будут распространятся, а останутся локализованы в пределах нерабочей области - все в порядке (их удержанию там будут способствовать силы магнитного притяжения). Однако так на практике бывает не часто. Скорее всего, частицы будут распространяться по поверхности, выбивая все новые и новые, процесс пойдет лавинообразно. Понятно, что в рабочей области это приведет к возникновению плохих блоков. Кроме того, магниторезистивные головки очень чувствительны к температурному режиму, а взаимодействие с такими частицами (оно непременно будет, так как головки парят над диском на крайне малой высоте) будет вызывать нагрев головок, результатом которого станет искажение сигнала и ошибки чтения. Кроме того, толчок накопителя во время работы может сопровождаться уходом головки на недопустимую для нормального функционирования высоту, или ее колебанием. В первом случае все ограничиться ошибками чтения и записи для данной конкретной операции - скорее всего не пройдут. А во втором данные могут быть прочитаны не оттуда (таже самая, по сути, ошибка, что и предыдущие) или записаны не туда, что может привести не только к потере записываемых, но и к порче других важных данных (понятнее должно стать из нижеприведенной схемы).</p>
+<div align="center"><img src="img/30000000.jpg" alt="" width="500" height="527" border="0"></div>
+<p>Решить проблему призвана SPS. Она представляет собой комплекс улучшений направленных на поглощение и минимизацию энергии удара. Простым ужесточением и утолщением держателей головок обойтись было нельзя, так как вместе с ростом толщины возросла бы и масса держателей, и, следовательно, инерция при перемещении головок при выполнении операций поиска, что вылилось бы в увеличение необходимого для реализации операций времени. Сотрудникам Quantum пришлось решать сложную инженерную задачу. Выход был найден в оптимизации формы, толщины держателей и используемых для их производства материалов. Удалось добиться лишь незначительного колебания головок (смотрим на схему).</p>
+<div align="center"><img src="img/40000000.jpg" alt="" width="500" height="227" border="0"></div>
+<p>Для защиты записи требовалось реализовать мониторинг стабильности положения и высоты головок. Эта задача также была решена. Теперь при обнаружении невозможности выполнения операций записи, операция откладывалась до времени прихода накопителя в "нормальное" состояние (снова смотрим на схему и сравниваем с приведенной выше). </p>
+<div align="center"><img src="img/50000000.jpg" alt="" width="400" height="499" border="0"></div>
+<p>Надо сказать, что у Maxtor, применяющей технологией SPS в настоящее время, были и свои наработки в этой области. Созданная Maxtor'ом лично технология называется ShockBlock. При ее разработке определяющими были две задачи: первая, снизить вероятность отрыва головки от поверхности настолько, насколько это вообще возможно; вторая - если все-таки отрыв головки произошел, свести к минимуму вероятность повреждений. Это также вылилось в ряд изменений конструкции держателей головок. Во втором случае инженеры Maxtor выявили, что повреждение поверхности при возврате обычно происходит острой кромкой головки (на рисунке).</p>
+<div align="center"><img src="img/60000000.jpg" alt="" width="294" height="140" border="0"></div>
+<p>И потому для минимизации последствий необходимо, что бы головка на пластину "падала плашмя", т.е. поверхность головки находилась параллельно поверхности диска. </p>
+<div align="center"><img src="img/70000000.jpg" alt="" width="285" height="116" border="0"></div>
+<p>Каким-то хитрым способом инженерам этого удалось достичь. Говорилось, что ShockBlock способен выдерживать нагрузки до 1000G. </p>
+<p>Видной фигурой на рынке харддисков - Seagate'ом, тоже была разработанная технология увеличения сопротивления ударным нагрузкам. И не одна. Перво-наперво это применяющийся с незапамятных (по сравнению со всеми остальными технологиями) времен SeaShield. Это решение представляет собой металлическую пластину со слоем пористого материала, крепящуюся снизу диска, и служащую механической защитой платы управления накопителя и, заодно, от электростатики. Знакома многим должна быть хотя бы по популярной ныне серии Barracuda, опустившейся до уровня винчестеров для домашнего компьютера. Привожу ее фотографию: </p>
+<div align="center"><img src="img/80000000.jpg" alt="" width="300" height="400" border="0"></div>
+<p>В дешевых сериях U вместо пластины применялся резиновый кожух. Очень тоненький везде, кроме углов. Обеспечиваемая им защита при падении гораздо хуже пластины, если падение произошло не на углы. А вот при падении на углы по идее должна быть гораздо лучше, так как они, толстые резиновые, должны поглощать значительную долю энергии. Ну защита от статики понятно тоже есть. Выглядит это вот так:</p>
+<div align="center"><img src="img/90000000.jpg" alt="" width="400" height="300" border="0"></div>
+<p>Впрочем, так продолжалось не долго. На современном рынке жестких дисков конкуренция очень серьезная. Экономить приходится на всем. Под нож пошел и резиновый кожух. Он превратился вот в такую вот обтяжку:</p>
+<div align="center"><img src="img/10000002.jpg" alt="" width="300" height="381" border="0"></div>
+<p> Хотя, возможно нагрев сподвиг на такое, и это сделали для улучшения вентиляции. Вторым решением является разработанная фирмой специальная упаковка для транспортировки - SeaShell. Выполняется из пластика, и, судя по заверениям компании, поглощает значительную часть энергии удара: вместо положенных 1100 G при падении с 30-сантиметровой высоты накопитель получит благодаря SeaShell лишь 180. Внушительно. Вот только интересно, при меньших нагрузках какую он часть поглощает… На фото SeaShell во всей своей красе.</p>
+<div align="center"><img src="img/11000000.jpg" alt="" width="330" height="447" border="0"></div>
+<p>Ну и, наконец, конек - технология G-Force Protection. Наверное, самая продвинутая технология. В ней комплексно охвачены двигатель и подшипник, головки и их держатели, блок дисков. </p>
+<p>При ударе возможно повреждение подшипника, изменение формы шариков и деформация поверхности канала скольжения, смещению ободов. Эти повреждения со временем могут (должны даже) увеличиваться. В конечном итоге это может привести к выходу из строя двигателя.</p>
+<div align="center"><img src="img/12000000.jpg" alt="" width="429" height="236" border="0"></div>
+<p>Выявить такие дефекты достаточно легко по возросшему при работе шуму. Для борьбы в технологии G-Force Protection предложено использовать подшипники с большим диаметром шариков, это будет уменьшать получаемое повреждение, так как воздействие будет поглощаться большей площадью. Сейчас актуальность этой технологии уже ниже, так как в последних линейках Barracuda - IV и V - используются жидкостные подшипники. Но, во-первых, технология разрабатывалась не сегодня, а во-вторых, жидкостные подшипники еще применяются не во всех дисках (и актуально, если вы ломаете голову над приобретением старого диска). </p>
+<p>Для борьбы со шлепком головок инженеры Seagate по сходному с другими компаниями пути: была поработана конструкция головок и их держателей: уменьшена масса и размер, увеличен клиренс между держателем и диском. Это позволило снизить вероятность удара головкой при внешнем воздействии. </p>
+<p>Проскальзывание дисков может возникнуть в результате удара, и вообще явление очень редкое. Тем не менее в технологии G-Force Protection предусмотрена возможность сохранить полную работоспособность даже в такой ситуации - благодаря включенной в нее (раньше была отдельно) системе коррекции Once Per Revolution Compensation (OPR). Смещение дисков отслеживается сервосистемой, и производится необходимая подстройка под ситуацию. Кем-то любимый а кем-то не очень Samsung тоже желает счастья и долгой жизни своим творениям. Для сего разработал две технологии: Shock Skin Bumper и Im-pacGuard. Shock Skin Bumper (SSB) представляет собой дополнительную демпфирующую накладку на корпусе накопителя, повышающую продолжительность ударного воздействия и снижая его амплитуду (защита для транспортировки и установки). </p>
+<div align="center"><img src="img/13000000.gif" alt="" width="360" height="181" border="0"></div>
+<p>ImpacGuard предотвращает вибрацию диска, когда головки находятся в парковочной зоне. Усиливает конструкцию устройства и его возможность противостоять неблагоприятному внешнему воздействию.</p>
+<div align="center"><img src="img/14000000.jpg" alt="" width="455" height="172" border="0"></div>
+<p>Последствия сильного удара могут проявиться не сегодня и не завтра. На первых порах множащиеся бэд-сектора будет скрывать умный <a href="mm_10.htm#smart">SMART</a>. А возникающие ошибки пройдут незамеченными укрывшись за привычными глюками окон. Прежде, чем что-то выльется в серьезную проблему могут пройти месяцы. А потом враз можно оказаться без данных. Поэтому какое бы большое число G не заявлялось в документации, старайтесь обращаться с винчестерами как можно бережнее. Береженого Бог бережет.</p>
+<p><a href="#top" target="_top" class="style4">наверх</a></p>
+<DIV></DIV>
+<div align="justify"></div>
+</body>
+</html>
