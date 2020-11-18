@@ -185,7 +185,9 @@ h2 {
   }
   .section a img {
     border: 5px solid #333;
-    margin: 15px;
+    margin: auto;
+    display: block;
+    
   }
   .section table {
     width: 100%;
