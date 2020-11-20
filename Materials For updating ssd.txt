@@ -1,6 +1,22 @@
-Interfaces +
-Advantages/Disadvantages +
+
++ 1.4 Интерфейсы для подключения SSD 
++ 1.5 Преимущества и недостатки по сравнению с жёсткими дисками (HDD)
+
++-  2. Устройство SSD - накопителя :      
+     + 2.1.4 Архитектура NAND
+     + 2.1.5 NAND флэш-память
+     + 2.1.6 Виды 3D NAND флэш-памяти
+     + 2.1.7 Сравнение архитектур
+     + 2.2 Контроллёр накопителей на твердотельной памяти
+
 SSD types https://greentechreviews.ru/2014/04/21/kakie-vidy-ssd-nakopitelej-sushhestvuyut-rassmatrivaem-pci-express-m-2-msata-i-sata-express/
 SSD system - https://dtf.ru/hard/46510-ssd-ustroystvo-komponenty-i-principy-raboty (also include interfaces)
 https://storelab-rc.ru/ssd-review.htm
 https://go-radio.ru/ssd.html
+
+
+
+Данные для доступа к серваку: https://apiwelding.herokuapp.com/api/docs/index.html
+крееды админа: 
+            adminEmail =  admin@admin.com 
+            password =  _admin123A
