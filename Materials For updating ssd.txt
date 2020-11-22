@@ -15,6 +15,16 @@ https://storelab-rc.ru/ssd-review.htm
 https://go-radio.ru/ssd.html
 
 
++    3. Как работает SSD - накопитель
+     +     3.1  Особенности операций записи данных в SSD-накопителях
+     +     3.2  Разница между последовательной и случайной записью в SSD-накопителях
+     +     3.3  Механизм Wear Leveling (new)
+     +     3.4  Способы повышения производительности SSD-накопителей
+     +     3.5  Характеристики НТТП
+
+https://compress.ru/article.aspx?id=21619
+https://www.dns-shop.ru/product/4c5400839c045c69/120-gb-ssd-nakopitel-kingston-v300-sv300s37a120g/characteristics/
+
 
 Данные для доступа к серваку: https://apiwelding.herokuapp.com/api/docs/index.html
 крееды админа: 
