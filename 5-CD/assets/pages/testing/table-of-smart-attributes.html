@@ -1,0 +1,1142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf8" />
+    <title>Медиа-курс "Жёсткий диск"</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../images/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../css/ui-darkness/jquery-ui-1.9.2.custom.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../css/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script type="text/javascript" src="../../js/jquery-1.8.2.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../../js/jquery-ui-1.9.2.custom.min.js"
+    ></script>
+    <script type="text/javascript" src="../../js/lightbox.js"></script>
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5.min.js"></script>
+    <![endif]-->
+    <style>
+      td {
+        vertical-align: middle;
+      }
+      .section {
+        float: none;
+      }
+    </style>
+  </head>
+  <body id="section9-1">
+    <div id="wrapper">
+      <a id="back" href="index.html" title="Назад"></a>
+      <h1>Таблица атрибутов SMART</h1>
+      <div class="section">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <thead>
+            <tr>
+              <td>№</td>
+              <td>Имя атрибута</td>
+              <td>Лучше если…</td>
+              <td>Описание</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width="56">01</td>
+              <td width="129">
+                <strong>Raw Read Error Rate</strong>
+              </td>
+              <td width="95">
+                Меньше<a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Частота ошибок при чтении данных с диска, происхождение которых
+                обусловлено аппаратной частью диска.<br />
+                Для всех дисков Seagate, Samsung (семейства F1 и более новые) и
+                Fujitsu 2,5″ это&nbsp;— число внутренних коррекций данных,
+                проведенных&nbsp;<strong>до</strong>&nbsp;выдачи в интерфейс,
+                следовательно на пугающе огромные цифры можно реагировать
+                спокойно.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">02</td>
+              <td width="129">
+                <strong>Throughput Performance</strong>
+              </td>
+              <td width="95">
+                Больше<a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Up.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Up.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Общая производительность диска. Если значение атрибута
+                уменьшается, то велика вероятность, что с диском есть проблемы.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">03</td>
+              <td width="129">
+                <strong>Spin-Up Time</strong>
+              </td>
+              <td width="95">
+                Меньше<a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Время раскрутки пакета дисков из состояния покоя до рабочей
+                скорости.<br />
+                Растет при износе механики (повышенное трение в подшипнике
+                и&nbsp;т.&nbsp;п.), также может свидетельствовать о
+                некачественном питании (например, просадке напряжения при старте
+                диска).
+              </td>
+            </tr>
+            <tr>
+              <td width="56">04</td>
+              <td width="129">
+                <strong>Start/Stop Count</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Полное число циклов запуск-остановка шпинделя. У дисков
+                некоторых производителей (например, Seagate)&nbsp;— счётчик
+                включения режима энергосбережения. В поле raw value хранится
+                общее количество запусков/остановок диска.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">05</td>
+              <td width="129">
+                <strong>Reallocated Sectors Count</strong>
+              </td>
+              <td width="95">
+                Меньше<a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Число операций переназначения секторов. Когда диск обнаруживает
+                ошибку чтения/записи, он помечает сектор «переназначенным» и
+                переносит данные в специально
+                отведённую&nbsp;<em>резервную</em>&nbsp;область. Вот почему на
+                современных жёстких дисках нельзя увидеть bad-блоки&nbsp;— все
+                они спрятаны в переназначенных секторах. Этот процесс называют
+                remapping, а переназначенный сектор&nbsp;— remap. Чем больше
+                значение, тем хуже состояние поверхности дисков. Поле raw value
+                содержит общее количество переназначенных секторов.<br />
+                Рост значения этого атрибута может свидетельствовать об
+                ухудшении состояния поверхности блинов диска.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">06</td>
+              <td width="129">
+                <strong>Read Channel Margin</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Запас канала чтения. Назначение этого атрибута не
+                документировано. В современных накопителях не используется.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">07</td>
+              <td width="129">
+                <strong>Seek Error Rate</strong>
+              </td>
+              <td width="95">
+                Меньше<a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Частота ошибок при позиционировании блока магнитных головок. Чем
+                их больше, тем хуже состояние механики и/или поверхности
+                жёсткого диска. Также на значение параметра может повлиять
+                перегрев и внешние вибрации (например, от соседних дисков в
+                корзине).
+              </td>
+            </tr>
+            <tr>
+              <td width="56">08</td>
+              <td width="129">
+                <strong>Seek Time Performance</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Up.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Up.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Больше
+              </td>
+              <td width="537">
+                Средняя производительность операции позиционирования магнитными
+                головками. Если значение атрибута уменьшается (замедление
+                позиционирования), то велика вероятность проблем с механической
+                частью привода головок.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">09</td>
+              <td width="129">
+                <strong>Power-On Hours (POH)</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число часов (минут, секунд&nbsp;— в зависимости от
+                производителя), проведённых во включенном состоянии. В качестве
+                порогового значения для него выбирается паспортное время
+                наработки на отказ (MTBF&nbsp;— mean time between failure).
+              </td>
+            </tr>
+            <tr>
+              <td width="56">10</td>
+              <td width="129">
+                <strong>Spin-Up Retry Count</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число повторных попыток раскрутки дисков до рабочей скорости в
+                случае, если первая попытка была неудачной. Если значение
+                атрибута увеличивается, то велика вероятность неполадок с
+                механической частью.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">11</td>
+              <td width="129">
+                <strong>Recalibration Retries</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Количество повторов запросов рекалибровки в случае, если первая
+                попытка была неудачной. Если значение атрибута увеличивается, то
+                велика вероятность проблем с механической частью.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">12</td>
+              <td width="129">
+                <strong>Device Power Cycle Count</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Количество полных циклов включения-выключения диска.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">13</td>
+              <td width="129">
+                <strong>Soft Read Error Rate</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число ошибок при чтении, по вине программного обеспечения,
+                которые не поддались исправлению. Все ошибки имеют не
+                механическую природу и указывают лишь на неправильную
+                размётку/взаимодействие с диском программ или операционной
+                системы.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">184</td>
+              <td width="129">
+                <strong>End-to-End error</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Данный атрибут&nbsp;— часть технологии HP SMART IV, это
+                означает, что после передачи через кэш памяти буфера данных
+                паритет данных между хостом и жестким диском не совпадают.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">187</td>
+              <td width="129">
+                <strong>Reported UNC Errors</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Ошибки, которые не могли быть восстановлены, используя методы
+                устранения ошибки аппаратными средствами.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">190</td>
+              <td width="129">
+                <strong>Airflow Temperature (WDC)</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Температура воздуха внутри корпуса жёсткого диска. Для дисков
+                Seagate рассчитывается по формуле (100&nbsp;— HDA temperature).
+                Для дисков Western Digital&nbsp;— (125- HDA).
+              </td>
+            </tr>
+            <tr>
+              <td width="56">191</td>
+              <td width="129">
+                <strong>G-sense error rate</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Количество ошибок, возникающих в результате ударных нагрузок.
+                Атрибут хранит показания встроенного акселерометра, который
+                фиксирует все удары, толчки, падения и даже неаккуратную
+                установку диска в корпус компьютера.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">192</td>
+              <td width="129">
+                <strong>Power-off retract count</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число циклов выключений или аварийных отказов
+                (включений/выключений питания накопителя).
+              </td>
+            </tr>
+            <tr>
+              <td width="56">193</td>
+              <td width="129">
+                <strong>Load/Unload Cycle</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Количество циклов перемещения блока магнитных головок в
+                парковочную зону / в рабочее положение.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">194</td>
+              <td width="129">
+                <strong>HDA temperature</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Здесь хранятся показания встроенного термодатчика для
+                механической части диска&nbsp;— банки (HDA&nbsp;— Hard Disk
+                Assembly). Информация снимается со встроенного термодатчика,
+                которым служит одна из магнитных головок, обычно нижняя в банке.
+                В битовых полях атрибута фиксируются текущая, минимальная и
+                максимальная температура. Не все программы, работающие со SMART,
+                правильно разбирают эти поля, так что к их показаниям стоит
+                относиться критически.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">195</td>
+              <td width="129">
+                <strong>Hardware ECC Recovered</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число коррекции ошибок аппаратной частью диска (чтение,
+                позиционирование, передача по внешнему интерфейсу). На дисках с
+                SATA-интерфейсом значение нередко ухудшается при повышении
+                частоты системной шины&nbsp;— SATA очень чувствителен к разгону.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">196</td>
+              <td width="129">
+                <strong>Reallocation Event Count</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число операций переназначения. В поле «raw value» атрибута
+                хранится общее число попыток переноса информации с
+                переназначенных секторов в резервную область. Учитываются как
+                успешные, так и неуспешные попытки.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">197</td>
+              <td width="129">
+                <strong>Current Pending Sector Count</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число секторов, являющихся кандидатами на замену. Они не были
+                ещё определены как плохие, но считывание с них отличается от
+                чтения стабильного сектора, это так называемые подозрительные
+                или нестабильные сектора. В случае успешного последующего
+                прочтения сектора он исключается из числа кандидатов. В случае
+                повторных ошибочных чтений накопитель пытается восстановить его
+                и выполняет операцию переназначения (remaping).<br />
+                Рост значения этого атрибута может свидетельствовать о
+                физической деградации жёсткого диска.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">198</td>
+              <td width="129">
+                <strong>Uncorrectable Sector Count</strong>
+              </td>
+              <td width="95">
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a
+                >Меньше
+              </td>
+              <td width="537">
+                Число неисправимых ошибок при обращении к сектору. {Возможно,
+                имелось в виду «число некорректируемых (средствами диска)
+                секторов», но никак не число самих ошибок!} В случае увеличения
+                числа ошибок велика вероятность критических дефектов поверхности
+                и/или механики накопителя.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">199</td>
+              <td width="129">
+                <strong>UltraDMA CRC Error Count</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Число ошибок, возникающих при передаче данных по внешнему
+                интерфейсу в режиме UltraDMA (нарушения целостности пакетов
+                и&nbsp;т.&nbsp;п.). Рост этого атрибута свидетельствует о плохом
+                (мятом, перекрученном) кабеле и плохих контактах. Также подобные
+                ошибки появляются при разгоне шины PCI, сбоях питания, сильных
+                электромагнитных наводках, а иногда и по вине драйвера.<br />
+                Возможно причина в некачественном шлейфе. Для исправления
+                попробуйте использовать SATA шлейф без защёлок, имеющий плотное
+                соединение с контактами диска.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">200</td>
+              <td width="129">
+                <strong
+                  >Write Error Rate /<br />
+                  Multi-Zone Error Rate</strong
+                >
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Показывает общее количество ошибок, происходящих при записи
+                сектора. Показывает общее число ошибок записи на диск. Может
+                служить показателем качества поверхности и механики накопителя.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">201</td>
+              <td width="129">
+                <strong>Soft read error rate</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Частота появления «программных» ошибок при чтении данных с
+                диска. Данный параметр показывает частоту появления ошибок при
+                операциях чтения с поверхности диска по вине программного
+                обеспечения, а не аппаратной части накопителя.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">202</td>
+              <td width="129">
+                <strong>Data Address Mark errors</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Number of Data Address Mark (DAM) errors (or) vendor-specific.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">203</td>
+              <td width="129">
+                <strong>Run out cancel</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">Количество ошибок ECC.</td>
+            </tr>
+            <tr>
+              <td width="56">204</td>
+              <td width="129">
+                <strong>Soft ECC correction</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Количество ошибок ECC, скорректированных программным способом.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">205</td>
+              <td width="129">
+                <strong>Thermal asperity rate (TAR)</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">Number of thermal asperity errors.</td>
+            </tr>
+            <tr>
+              <td width="56">206</td>
+              <td width="129">
+                <strong>Flying height</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">Высота между головкой и поверхностью диска.</td>
+            </tr>
+            <tr>
+              <td width="56">207</td>
+              <td width="129">
+                <strong>Spin high current</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">Величина силы тока при раскрутке диска.</td>
+            </tr>
+            <tr>
+              <td width="56">208</td>
+              <td width="129">
+                <strong>Spin buzz</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">Number of buzz routines to spin up the drive.</td>
+            </tr>
+            <tr>
+              <td width="56">209</td>
+              <td width="129">
+                <strong>Offline seek performance</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Производительность поиска во время офлайновых операций (Drive’s
+                seek performance during offline operations.)
+              </td>
+            </tr>
+            <tr>
+              <td width="56">220</td>
+              <td width="129">
+                <strong>Disk Shift</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Дистанция смещения блока дисков относительно шпинделя. В
+                основном возникает из-за удара или падения. Единица измерения
+                неизвестна. При увеличении атрибута диск быстро становится
+                неработоспособным.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">221</td>
+              <td width="129">
+                <strong>G-Sense Error Rate</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Число ошибок, возникших из-за внешних нагрузок и ударов. Атрибут
+                хранит показания встроенного датчика удара.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">222</td>
+              <td width="129">
+                <strong>Loaded Hours</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Время, проведённое блоком магнитных головок между выгрузкой из
+                парковочной области в рабочую область диска и загрузкой блока
+                обратно в парковочную область.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">223</td>
+              <td width="129">
+                <strong>Load/Unload Retry Count</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Количество новых попыток выгрузок/загрузок блока магнитных
+                головок в/из парковочной области после неудачной попытки.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">224</td>
+              <td width="129">
+                <strong>Load Friction</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Величина силы трения блока магнитных головок при его выгрузке из
+                парковочной области.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">225</td>
+              <td width="129">
+                <strong>Load Cycle Count</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Количество циклов перемещения блока магнитных головок в
+                парковочную область.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">226</td>
+              <td width="129">
+                <strong>Load 'In'-time</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Время, за которое привод выгружает магнитные головки из
+                парковочной области на рабочую поверхность диска.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">227</td>
+              <td width="129">
+                <strong>Torque Amplification Count</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Количество попыток скомпенсировать вращающий момент.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">228</td>
+              <td width="129">
+                <strong>Power-Off Retract Cycle</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">
+                Количество повторов автоматической парковки блока магнитных
+                головок в результате выключения питания.
+              </td>
+            </tr>
+            <tr>
+              <td width="56">230</td>
+              <td width="129">
+                <strong>GMR Head Amplitude</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">
+                Амплитуда «дрожания» (расстояние повторяющегося перемещения
+                блока магнитных головок).
+              </td>
+            </tr>
+            <tr>
+              <td width="56">231</td>
+              <td width="129">
+                <strong>Temperature</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">Температура жёсткого диска.</td>
+            </tr>
+            <tr>
+              <td width="56">240</td>
+              <td width="129">
+                <strong>Head flying hours</strong>
+              </td>
+              <td width="95"><br /></td>
+              <td width="537">Время позиционирования головки.</td>
+            </tr>
+            <tr>
+              <td width="56">250</td>
+              <td width="129">
+                <strong>Read error retry rate</strong>
+              </td>
+              <td width="95">
+                Меньше
+                <a
+                  href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                  _mce_href="http://commons.wikimedia.org/w/index.php?title=File:Dark_Green_Arrow_Down.svg&amp;page=1&amp;uselang=ru"
+                ></a>
+              </td>
+              <td width="537">Число ошибок во время чтения жёсткого диска.</td>
+            </tr>
+          </tbody>
+        </table>
+        &nbsp;
+      </div>
+      <!-- .section -->
+    </div>
+    <!-- #wrapper -->
+
+    <div id="toc-holder" class="toc-holder">
+      <a href="#" class="toc-link" id="toc-link" onclick="return false;"
+        ><span>&#9660;</span> Содержание</a
+      >
+      <ul id="toc" class="toc">
+        <li class="toc-h1">
+          <a href="#">1. Конструкция НЖМД</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../construction/index.html#section1-1"
+                >1.1&nbsp; Введение</a
+              >
+            </li>
+            <li>
+              <a href="../construction/index.html#section1-2"
+                >1.2&nbsp; Корпус</a
+              >
+            </li>
+            <li>
+              <a href="../construction/index.html#section1-3"
+                >1.3&nbsp; Пакет магнитных дисков</a
+              >
+            </li>
+            <li>
+              <a href="../construction/index.html#section1-4"
+                >1.4&nbsp; Двигатель и элемнеты привода шпинделя</a
+              >
+            </li>
+            <li>
+              <a href="../construction/index.html#section1-5"
+                >1.5&nbsp; Блок магнитных головок</a
+              >
+            </li>
+            <li>
+              <a href="../construction/index.html#section1-6"
+                >1.6&nbsp; Печатная плата с электронными компонентами</a
+              >
+            </li>
+            <li>
+              <a href="../construction/index.html#section1-7"
+                >1.7&nbsp; Кэш-буфер НЖМД</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section2"
+            >2. Механизм привода и автоматической парковки головок</a
+          >
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../drive-and-heads-mechanism/index.html#section2-1"
+                >2.1&nbsp; Устройство механизма привода и автоматической
+                парковки головок</a
+              >
+            </li>
+            <li>
+              <a href="../drive-and-heads-mechanism/index.html#section2-2"
+                >2.2&nbsp; Механизм привода с шаговым двигателем</a
+              >
+            </li>
+            <li>
+              <a href="../drive-and-heads-mechanism/index.html#section2-3"
+                >2.3&nbsp; Механизм привода с подвижной катушкой</a
+              >
+            </li>
+            <li>
+              <a href="../drive-and-heads-mechanism/index.html#section2-4"
+                >2.4&nbsp; Система обратной связи</a
+              >
+            </li>
+            <li>
+              <a href="../drive-and-heads-mechanism/index.html#section2-5"
+                >2.5&nbsp; Автоматическая парковка головок</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section3">3. Процесс работы HDD</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../process-work/index.html#section3-1"
+                >3.1&nbsp; Пpи включении</a
+              >
+            </li>
+            <li>
+              <a href="../process-work/index.html#section3-2"
+                >3.2&nbsp; Во вpемя pаботы</a
+              >
+            </li>
+            <li>
+              <a href="../process-work/index.html#section3-3"
+                >3.3&nbsp; Пpи отключении</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section4">4. Интерфейсы</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../interfaces/index.html#section4-1"
+                >4.1&nbsp; Интерфейс ATA</a
+              >
+            </li>
+            <li>
+              <a href="../interfaces/index.html#section4-2"
+                >4.2&nbsp; Интерфейс SATA</a
+              >
+            </li>
+            <li>
+              <a href="../interfaces/index.html#section4-3"
+                >4.3&nbsp; Интерфейс SCSI</a
+              >
+            </li>
+            <li>
+              <a href="../interfaces/index.html#section4-4"
+                >4.4&nbsp; Интерфейс SAS</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section5">5. Чтение, запись на HDD</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../read-write/index.html#section5-1"
+                >5.1&nbsp; Чтение HDD</a
+              >
+            </li>
+            <li>
+              <a href="../read-write/index.html#section5-2"
+                >5.2&nbsp; Запись на HDD</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section6">6. Логическая организация данных</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../logical-data/index.html#section6-1"
+                >6.1&nbsp; Устройство HDD</a
+              >
+            </li>
+            <li>
+              <a href="../logical-data/index.html#section6-2"
+                >6.2&nbsp; Зонная запись</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="toc-h1">
+          <a href="#section7">7. Подготовка к использованию</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../preparation-for-use/index.html#section7-1"
+                >7.1&nbsp; Введение</a
+              >
+            </li>
+            <li>
+              <a href="../preparation-for-use/index.html#section7-2"
+                >7.2&nbsp; Конфигурирование устройства. Подключение
+                интерфейсного и питающего кабелей</a
+              >
+            </li>
+            <li>
+              <a href="../preparation-for-use/index.html#section7-3"
+                >7.3&nbsp; Установка параметров НЖМД в CMOS Setup</a
+              >
+            </li>
+            <li>
+              <a href="../preparation-for-use/index.html#section7-4"
+                >7.4&nbsp; Разбиение на разделы</a
+              >
+            </li>
+            <li>
+              <a href="../preparation-for-use/index.html#section7-5"
+                >7.5&nbsp; Логическое форматирование</a
+              >
+            </li>
+            <li>
+              <a href="../preparation-for-use/index.html#section7-6"
+                >7.6&nbsp; Создание системного диска</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section8">8. Параметры дисковых накопителей</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../parameters/index.html#section8-1"
+                >8.1&nbsp; Общие параметры</a
+              >
+            </li>
+            <li>
+              <a href="../parameters/index.html#section8-2"
+                >8.2&nbsp; Параметры организации конфигурации</a
+              >
+            </li>
+            <li>
+              <a href="../parameters/index.html#section8-3"
+                >8.3&nbsp; Параметры быстродействия и производительности</a
+              >
+            </li>
+            <li>
+              <a href="../parameters/index.html#section8-4"
+                >8.4&nbsp; Параметры надежности и достоверности хранения
+                данных</a
+              >
+            </li>
+            <li>
+              <a href="../parameters/index.html#section8-5"
+                >8.5&nbsp; Физические параметры</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section9">9. Тестирование</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../testing/index.html#section9-1">9.1&nbsp; SMART</a>
+            </li>
+            <li>
+              <a href="../testing/index.html#section9-2"
+                >9.2&nbsp; ZD WinBench 99</a
+              >
+            </li>
+            <li>
+              <a href="../testing/index.html#section9-3">9.3&nbsp; HddSpeed</a>
+            </li>
+            <li>
+              <a href="../testing/index.html#section9-4">9.4&nbsp; HD Tune</a>
+            </li>
+          </ul>
+        </li>
+        <li class="toc-h1">
+          <a href="#section10">10. RAID-массивы</a>
+          <ul class="toc-sub closed">
+            <li>
+              <a href="../raid/index.html#section10-1"
+                >10.1&nbsp; Дисковый массив RAID</a
+              >
+            </li>
+            <li>
+              <a href="../raid/index.html#section10-2"
+                >10.2&nbsp; Типы(уровни) RAID</a
+              >
+            </li>
+            <li>
+              <a href="../raid/index.html#section10-3"
+                >10.3&nbsp; Сравнительная характеристика стандартных уровней
+                RAID</a
+              >
+            </li>
+            <li>
+              <a href="../raid/index.html#section10-4"
+                >10.4&nbsp; Контроллеры RAID</a
+              >
+            </li>
+            <li>
+              <a href="../raid/index.html#section10-5"
+                >10.5&nbsp; Типы контроллеров RAID</a
+              >
+            </li>
+            <li>
+              <a href="../raid/index.html#section10-6"
+                >10.6&nbsp; Специальные технологии RAID-контроллеров</a
+              >
+            </li>
+            <li>
+              <a href="../raid/index.html#section10-7">10.7&nbsp; RAID 0-50</a>
+            </li>
+          </ul>
+        </li>
+        <li class="toc-click">
+          <a href="../video/index.html">Видеоматериал</a>
+        </li>
+        <li class="toc-click">
+          <a href="../literature/index.html">Литература</a>
+        </li>
+      </ul>
+    </div>
+    <!-- #toc-holder -->
+    <a href="#top" class="top-link" id="top-link">&#9650; Наверх</a>
+    <script type="text/javascript" src="../../js/menu.min.js"></script>
+  </body>
+</html>
