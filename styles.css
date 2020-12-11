@@ -297,6 +297,11 @@ label {
 }
 
 .page-title {
+  text-align: center;
+  position: absolute;
+  width: 800;
+  line-height: 1;
+  top: 80;
   margin-bottom: 75px;
 }
 .page-title img {
@@ -306,7 +311,7 @@ label {
   font-size: 68px;
   margin-bottom: 25px;
   position: relative;
-  z-index: 0;
+  z-index: 1;
   font-weight: 900;
   text-transform: uppercase;
 }
